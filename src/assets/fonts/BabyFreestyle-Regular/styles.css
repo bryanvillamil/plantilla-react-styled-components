@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'BabyFreestyle-Regular';
+  src: url('BabyFreestyle-Regular.eot?#iefix') format('embedded-opentype'),  url('BabyFreestyle-Regular.otf')  format('opentype'),
+	     url('BabyFreestyle-Regular.woff') format('woff'), url('BabyFreestyle-Regular.ttf')  format('truetype'), url('BabyFreestyle-Regular.svg#BabyFreestyle-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
