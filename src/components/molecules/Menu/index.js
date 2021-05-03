@@ -34,7 +34,15 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
               className="gtmToallitasClicMenuAprendeSostenibilidad"
               to="/sostenibilidad"
             >
-              Aprende sobre sostenibilidad
+              Productos
+            </NavLink>
+
+            <NavLink
+              activeClassName="selected"
+              className=""
+              to="/tu-toallita"
+            >
+              Tu toallita ideal
             </NavLink>
             
           </MenuNavDesktop>

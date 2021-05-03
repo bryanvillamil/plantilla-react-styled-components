@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { ThemeProvider } from 'styled-components';
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
+const theme = {
+  breakpoints: {
+    xs: 480,
+    sm: 568,
+    md: 768,
+    lg: 1024,
+    xl: 1200,
+    xls: 1400,
+    xxl: 1500,
+  }
+}
+
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </Provider>,
   document.getElementById('root')
 );

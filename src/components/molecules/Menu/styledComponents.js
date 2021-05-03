@@ -22,22 +22,6 @@ export const MenuNav = styled.nav`
   &.opened {
     transform: translateX(0);
   }
-
-  a.saving {
-    background: #4D5A31;
-    border-radius: 0;
-    clip-path: polygon(0 25%, 4% 0,20% 2%,15% 0,70% 0,73% 2%,90% 2%,98% 4%,100% 60%,98% 95%,94% 100%,50% 100%,40% 100%,25% 98%,4% 98%,1% 90%);
-    font-family: 'bariol bold';
-    padding: 8px 12px;
-    text-align: center;
-    color: #fff;
-    transition: all 0.5s ease;
-    font-size: 18px;
-    max-width: 140px;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
 `
 
 export const MenuNavDesktop = styled.nav`
@@ -45,6 +29,7 @@ export const MenuNavDesktop = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 30px 10px;
   a, span {
     font-family: 'bariol bold';
     text-decoration: none;
@@ -81,67 +66,9 @@ export const MenuNavDesktop = styled.nav`
     }
   }
 
-  button {
-    white-space: nowrap;
-    font-size: 17px;
-    &.login {
-      background: #E6D363;
-      border-radius: 0;
-      clip-path: polygon(0 15%,2% 0,10% 2%,15% 0,70% 0,73% 2%,90% 2%,98% 4%,100% 50%,98% 95%,94% 100%,50% 100%,30% 100%,25% 98%,4% 98%,1% 90%);
-      font-family: 'bariol bold';
-      padding: 10px 35px;
-    }
-
-  }
-  a.saving {
-    background: #4D5A31;
-    border-radius: 0;
-    clip-path: polygon(0 25%, 4% 0,20% 2%,15% 0,70% 0,73% 2%,90% 2%,98% 4%,100% 60%,98% 95%,94% 100%,50% 100%,40% 100%,25% 98%,4% 98%,1% 90%);
-    font-family: 'bariol bold';
-    padding: 10px 28px;
-    color: #fff;
-    transition: all 0.5s ease;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  .contentUser {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    .userName {
-      font-size: 16px;
-      color: #789C4A;
-      font-family: 'bariol bold';
-      line-height: 20px;
-      margin: 0;
-    }
-  
-    .closeSesion {
-      text-decoration: underline;
-      font-size: 16px;
-      color: #789C4A;
-      font-family: 'bariol bold';
-      line-height: 20px;
-      margin: 0;
-      cursor: pointer;
-    }
-  }
   ${breakpoint('lg')`
     a, span {
       font-size: 15px;
-    }
-    button {
-      font-size: 15px;
-      &.login {
-        padding: 10px 26px;
-      }
-
-      &.saving {
-        padding: 10px 20px;
-      }
     }
   `}
 
@@ -149,31 +76,9 @@ export const MenuNavDesktop = styled.nav`
     a, span {
       font-size: 18px;
     }
-    button {
-      font-size: 18px;
-      &.login {
-        padding: 10px 35px;
-      }
-
-      &.saving {
-        padding: 10px 28px;
-      }
-    }
-    .contentUser {
-      .userName {
-        font-size: 20px;
-        margin-bottom: 3px;
-      }
-      .closeSesion {
-        font-size: 20px;
-      }
-    }
   `}
   ${breakpoint('xxl')`
     a, span {
-      font-size: 20px;
-    }
-    button {
       font-size: 20px;
     }
   `}

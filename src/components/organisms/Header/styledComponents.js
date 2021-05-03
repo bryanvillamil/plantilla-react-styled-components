@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
+import lineHeader from '../../../assets/HOME/acuarela-header.svg'
 
 export const ContentHeader = styled.header`
   display: flex;
@@ -9,14 +10,28 @@ export const ContentHeader = styled.header`
   position: sticky;
   top: 0;
   z-index: 99;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 30px;
+    background: url(${lineHeader});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
 `;
 
 export const HeaderContain = styled.div`
   display: flex;
   width: 90%;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  position: relative;
   ${breakpoint('lg')`
     width: 95%;
   `}
@@ -27,20 +42,22 @@ export const HeaderContain = styled.div`
 
 export const HeaderLogo = styled.div`
   display: flex;
-  width: 110px;
+  width: 190px;
   padding: 12px 0;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  z-index: 3;
   h1 {
     margin: 0;
+    width: 100%;
   }
   img {
-    /* width: 80px; */
-    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
   }
   ${breakpoint('lg')`
     padding: 10px 0;
-    img {
-      /* width: 100px; */
-    }
   `}
 `
 
@@ -49,7 +66,8 @@ export const HeaderMenu = styled.div`
   padding-left: 40px;
   width: 50%;
   position: relative;
+  min-height: 65px;
   ${breakpoint('xxl')`
-    width: 45%;
+    width: 25%;
   `}
 `
