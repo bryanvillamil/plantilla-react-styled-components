@@ -11,6 +11,7 @@ import {
   Close, 
   MobileLogo, 
   MobileBottom, 
+  ContentDropdown,
 } from './styledComponents';
 
 const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
@@ -30,12 +31,30 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
             </NavLink>
 
             <NavLink
+              exact
               activeClassName="selected"
-              className="gtmToallitasClicMenuAprendeSostenibilidad"
-              to="/sostenibilidad"
+              className=""
+              to="/productos"
             >
               Productos
             </NavLink>
+
+
+            {/* <ContentDropdown>
+              <span>Productos</span>
+              <ul>
+                <li>
+                  <a href="">1</a>
+                </li>
+                <li>
+                  <a href="">2</a>
+                </li>
+                <li>
+                  <a href="">3</a>
+                </li>
+              </ul>
+            </ContentDropdown> */}
+
 
             <NavLink
               activeClassName="selected"

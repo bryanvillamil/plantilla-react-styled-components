@@ -42,10 +42,10 @@ export const HeaderContain = styled.div`
 
 export const HeaderLogo = styled.div`
   display: flex;
-  width: 190px;
+  width: 150px;
   padding: 12px 0;
   position: absolute;
-  top: 6px;
+  top: 12px;
   left: 0;
   z-index: 3;
   h1 {
@@ -59,14 +59,21 @@ export const HeaderLogo = styled.div`
   ${breakpoint('lg')`
     padding: 10px 0;
   `}
+  ${breakpoint('xxl')`
+    width: 190px;
+    top: 6px;
+  `}
 `
 
 export const HeaderMenu = styled.div`
   display: flex;
   padding-left: 40px;
-  width: 50%;
+  width: 40%;
   position: relative;
   min-height: 65px;
+  ${breakpoint('lg')`
+    width: 30%;
+  `}
   ${breakpoint('xxl')`
     width: 25%;
   `}

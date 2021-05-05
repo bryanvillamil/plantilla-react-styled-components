@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
+import lineActive from '../../../assets/HOME/bar-active-01.svg'
 
 export const MenuNav = styled.nav`
   display: flex;
@@ -29,14 +30,15 @@ export const MenuNavDesktop = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 30px 10px;
   a, span {
-    font-family: 'bariol bold';
+    font-family: 'bariol regular';
     text-decoration: none;
-    color: #4D5A31;
+    color: #616161;
     transition: all 0.5s ease;
     position: relative;
-    font-size: 17px;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 24px 10px;
     cursor: pointer;
     &:hover {
       &:after {
@@ -49,37 +51,41 @@ export const MenuNavDesktop = styled.nav`
       position: absolute;
       bottom: -5px;
       left: 0px;
-      width: 100%;
-      height: 2px;
+      width: 75%;
+      height: 5px;
+      right: 0;
+      margin: 0 auto;
       transform: scale3d(0, 1, 1);
       transform-origin: left center;
       transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.4s;
-      background: #4D5A31;
+      background: url(${lineActive});
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-
     &.selected {
-      color: #789C4A;
+      color: #562E91;
+      font-family: 'bariol bold';
       &:after {
         transform: scale3d(1, 1, 1);
-        background: #789C4A;
       }
     }
   }
 
   ${breakpoint('lg')`
     a, span {
-      font-size: 15px;
+      font-size: 18px;
     }
   `}
-
   ${breakpoint('xls')`
     a, span {
-      font-size: 18px;
+      font-size: 22px;
     }
   `}
   ${breakpoint('xxl')`
     a, span {
-      font-size: 20px;
+      font-size: 24px;
+      margin: 30px 10px;
     }
   `}
 `
@@ -154,6 +160,36 @@ export const MobileBottom = styled.div`
           transform: scale3d(1, 1, 1);
           background: #789C4A;
         }
+      }
+    }
+  }
+`;
+
+export const ContentDropdown = styled.div`
+  display: flex;
+  position: relative;
+  background: #fff;
+  ul {
+    position: absolute;
+    top: -100%;
+    top: 86%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    border-radius: 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      width: 100%;
+      a {
+        padding: 12px 0;
+        font-size: 18px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0;
       }
     }
   }

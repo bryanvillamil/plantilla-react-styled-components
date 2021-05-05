@@ -75,28 +75,22 @@ const Icons = props => {
       );
     case 'arrow':
       return (
-        <svg width={width} height={height} viewBox="0 0 66.001 66.001">
-          <defs>
-            <filter id="a" x="0" y="0" width={width} height={height} filterUnits="userSpaceOnUse"><feOffset dy="2" input="SourceAlpha"/>
-            <feGaussianBlur stdDeviation="3" result="b"/>
-            <feFlood floodColor="#351d58" floodOpacity="0.302"/><feComposite operator="in" in2="b"/><feComposite in="SourceGraphic"/>
-            </filter>
-          </defs>
-          <g transform="translate(9 7)">
-            <g transform="matrix(1, 0, 0, 1, -9, -7)" fill="url(#a)" >
-              <path 
-                d="M58.779,28.071c-5.249-.165-7.505.892-11.268,2.861-3.623,1.9-5.591,3.067-7.987,6.084a1.578,1.578,0,0,1-.251-.079c-.124-.052-.3-.326-.867.382s-4.028,7.055-4.677,10.13S33.47,54.4,34.9,59.076s1.617,7.257,6.227,11.607c2.051,2.167,4.547,2.88,6.9,3.7.3.1.536.648.9.765a36.082,36.082,0,0,0,8.634.9c6.493,0,13.087-1.833,17.239-6.016s6.388-10.714,6.617-19.083c.212-7.741-1.638-11.248-5.645-15-.286-.268-.622-1.315-.972-1.611A27.08,27.08,0,0,0,58.779,28.071Z" 
-                transform="translate(-24.43 -21.05)"
-                fill="#e7dded"
-              />
-            </g>
-            <g transform="translate(12 12.001)">
-              <rect width={width} height={height} fill="none" />
+        <svg height={height} width={width} viewBox="0 0 64 64">
+          <g transform="translate(-4005 -2662)">
+            <g transform="translate(4005 2662)">
               <path
-                d="M9.35,15.834l7.807-5.389L.55,10.687,0,9.562V8.156l16.924-.721L8.8,1.969,10.45,0,22,7.875l-.55,2.812L11,18Z" 
-                transform="translate(1 3)"
-                fill="#562e91"
+                d="M67.23,28.077c-7-.22-10.007,1.19-15.024,3.814C47.376,34.419,44.751,35.98,41.558,40a2.1,2.1,0,0,1-.335-.106c-.166-.07-.4-.434-1.156.51S34.7,49.813,33.831,53.914s-.346,9.269,1.557,15.5,2.156,9.675,8.3,15.476c2.735,2.889,6.063,3.839,9.2,4.936.4.14.715.864,1.2,1.02,2.5.813,7.875,1.206,11.512,1.206,8.658,0,17.449-2.444,22.985-8.022S97.1,69.748,97.4,58.589c.283-10.322-2.184-15-7.526-20-.381-.357-.83-1.753-1.3-2.148A36.106,36.106,0,0,0,67.23,28.077Z"
+                transform="translate(-33.425 -28.054)" 
+                fill={backgroundColor}
               />
+              <g transform="translate(16 16)">
+                <rect width="32" height="32" fill="none"/>
+                <path
+                  d="M190,12.382l-13.093,8.951-2.687-4.476,10.5-6.266L174,3.9,176.345,0,189.9,7.736h.1Z" 
+                  transform="translate(-165.999 5.333)" 
+                  fill="#fff"
+                />
+              </g>
             </g>
           </g>
         </svg>
