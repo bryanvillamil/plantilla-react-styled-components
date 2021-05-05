@@ -11,6 +11,7 @@ const initialState = {
   didAsk: false,
   stage: 4,
   didRate: false,
+  dataProduct: {}
 };
 
 const Account = (state = initialState, action) => {

@@ -10,6 +10,7 @@ import {
   SHOW_SIGNUP,
   SHOW_STAGE,
   TOGGLE_LOADER,
+  DATA_PRODUCT,
 } from "./actionTypes";
 
 //-------ACCOUNT
@@ -58,4 +59,8 @@ export function showRate() {
 
 export function showError(payload) {
   return { type: SHOW_ERROR, payload };
+}
+
+export function dataProduct(data) {
+  return { type: DATA_PRODUCT, data };
 }

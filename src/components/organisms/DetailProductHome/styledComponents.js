@@ -125,6 +125,75 @@ export const ProductSlide = styled.div`
   }
 `;
 
+export const ItemProduct = styled.div`
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  max-width: 270px;
+  margin: 0 auto;
+  width: 90%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .content--text {
+    position: absolute;
+    bottom: -200%;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 75%;
+    height: 72%;
+    background: rgba(98, 51, 147, .7);
+    transition: all  0.5s ease-in-out;
+    max-width: 240px;
+    margin: auto;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    clip-path: polygon(0 15%,2% 0,10% 2%,15% 0,70% 0,73% 2%,90% 2%,98% 4%,100% 50%,98% 95%,94% 100%,50% 100%,30% 100%,25% 98%,4% 98%,1% 90%);
+    padding: 20px;
+    h2 {
+      color: #fff;
+      text-align: center;
+      font-family: 'bariol bold';
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+    p {
+      color: #fff;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      font-family: 'bariol regular';
+      line-height: 1.2;
+      font-size: 16px;
+    }
+    ${breakpoint('xxl')`
+      width: 77%;
+      height: 73%;
+      h2 {
+        font-size: 21px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 18px;
+      }
+    `}
+  }
+
+  &:hover {
+    .content--text {
+      bottom: 10px;
+    }
+  }
+`;
+
 
 export const ContentSeeMore = styled.div`
   display: flex;

@@ -12,3 +12,4 @@ export const SHOW_ASK_SAMPLE = "SHOW_ASK_SAMPLE";
 export const SHOW_STAGE = "SHOW_STAGE";
 export const SHOW_RATE = "SHOW_RATE";
 export const SHOW_ERROR = "SHOW_ERROR";
+export const DATA_PRODUCT = "DATA_PRODUCT";

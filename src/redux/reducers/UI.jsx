@@ -6,6 +6,7 @@ import {
   SHOW_SIGNUP,
   SHOW_STAGE,
   TOGGLE_LOADER,
+  DATA_PRODUCT
 } from "../actions/actionTypes";
 
 const initialState = {
@@ -16,6 +17,7 @@ const initialState = {
   showStage: false,
   showRate: false,
   showError: "",
+  dataProduct: {}
 };
 
 const UI = (state = initialState, action) => {
@@ -34,6 +36,8 @@ const UI = (state = initialState, action) => {
       return { ...state, showRate: !state.showRate };
     case SHOW_ERROR:
       return { ...state, showError: action.payload };
+    case DATA_PRODUCT:
+      return { ...state, dataProduct: action.data };
     default:
       return state;
   }

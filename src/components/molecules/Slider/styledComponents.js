@@ -6,11 +6,11 @@ export const SliderContainer = styled.div`
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  img.imgCenter {
+  /* img.imgCenter {
     margin: 0 auto;
     width: 90%;
     max-width: 280px;
-  }
+  } */
 `;
 
 export const Arrow = styled.div`

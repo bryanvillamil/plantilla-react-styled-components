@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from '../../molecules/Slider'
+import { useDispatch } from 'react-redux'
 
 import { 
   ContentProduct,
@@ -7,10 +8,12 @@ import {
   ProductLeft,
   ProductRight,
   ProductSlide,
+  ItemProduct,
   ContentSeeMore
 } from './styledComponents'
 
 const DetailProductHome = ({ dataProduct }) => {
+  const dispatch = useDispatch();
   const { 
     imgPpal, 
     imgTitle, 
@@ -30,6 +33,10 @@ const DetailProductHome = ({ dataProduct }) => {
   //   slidesToShow: dataSlider.length,
   //   slidesToScroll: dataSlider.length
   // };
+
+  const onClickProduct = () => {
+
+  }
 
   return (
     <ContentProduct>
@@ -61,14 +68,22 @@ const DetailProductHome = ({ dataProduct }) => {
           {dataSlider.map(item => {
             return (
               <div key={item.id}>
-                <img src={item.image} className="imgCenter" alt="img slide " />
+                <ItemProduct>
+                  <img src={item.image} className="imgCenter" alt="img slide " />
+                  {/* <div className="bg" style={{ background: `url(${item.image})`}}> */}
+                  {/* </div> */}
+                  <div className="content--text">
+                    <h2>{item.title}</h2>
+                    <p>{item.description}</p>
+                  </div>
+                </ItemProduct>
               </div>
             )
           })}
         </Slider>
 
         <ContentSeeMore>
-          <LinkSeeMore />
+          <LinkSeeMore dispatch={dispatch} onClick={onClickProduct} />
         </ContentSeeMore>
       </ProductSlide>
     </ContentProduct>
