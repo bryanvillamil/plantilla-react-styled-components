@@ -34,9 +34,14 @@ export const FormSelectTitle = styled.div`
   width: 100%;
   padding: 30px 20px 0;
   img {
-    max-width: 500px;
+    max-width: 420px;
     width: 90%;
   }
+  ${breakpoint('xxl')`
+    img {
+      max-width: 500px;
+    }
+  `}
 `;
 
 export const FormSelectContent = styled.div`
