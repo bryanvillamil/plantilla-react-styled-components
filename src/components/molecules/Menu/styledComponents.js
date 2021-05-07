@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 import lineActive from '../../../assets/HOME/bar-active-01.svg'
+import { Animated } from "react-animated-css";
 
 export const MenuNav = styled.nav`
   display: flex;
@@ -69,6 +70,11 @@ export const MenuNavDesktop = styled.nav`
       &:after {
         transform: scale3d(1, 1, 1);
       }
+    }
+  }
+  span {
+    &:after {
+      content: none;
     }
   }
 
@@ -168,28 +174,57 @@ export const MobileBottom = styled.div`
 export const ContentDropdown = styled.div`
   display: flex;
   position: relative;
+  span {
+    display: flex;
+    align-items: center;
+    svg { 
+      margin-left: 3px;
+      margin-top: 4px;
+    }
+  }
+`;
+
+export const DropdownProduct = styled(Animated)`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: -2;
   background: #fff;
-  ul {
-    position: absolute;
-    top: -100%;
-    top: 86%;
-    left: 0;
+  border-radius: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 2px 5px 8px #bbb;
+  padding: 0;
+  min-width: 150px;
+  overflow: hidden;
+  li {
     width: 100%;
-    z-index: 2;
-    background: #fff;
-    border-radius: 4px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    a {
+      padding: 10px 12px;
+      border-bottom: 1px solid #ccc;
+      font-size: 18px;
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      &:after {
+        content: none;
+      }
+      &:hover {
+        background: #562E91;
+        color: #fff;
+      }
+    }
+    &:last-child {
       a {
-        padding: 12px 0;
-        font-size: 18px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        margin: 0;
+        border: none;
       }
     }
   }

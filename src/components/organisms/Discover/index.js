@@ -11,7 +11,7 @@ const Discover = (props) => {
       <BannerContent>
           <img className="imgDiscover" src={llegamosImg} alt="llegamos a peru" />
           <LinkDiscover href="#">Descubrir</LinkDiscover>
-        </BannerContent>
+      </BannerContent>
       <BgDiscover src={bannerDiscover} alt="banner descubre" />
     </ContentDiscover>
   )

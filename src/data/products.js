@@ -84,7 +84,7 @@ export const dataProducts = [
         description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
       }
     ],
-    LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductSkin')} to='/product/pure-skin'>Ver más</BtnSeeMore>,
+    LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductSkin')} to='/producto/pure-skin'>Ver más</BtnSeeMore>,
     contentDetail: {
       title: titleDetailProductSkin,
       DescriptionDetail: () => <div className="description"><p>Ofrecen un Cuidado puro para los bebés, porque gracias a su fórmula <strong>99% agua y sin fragancia ,</strong> es lo más parecido a limpiar con agua y algodón y no altera el pH de la piel. <strong>¡Ideales para usar desde el primer día!</strong></p> <p>Además ofrecen un cuidado para el planeta porque tienen una tela libre de plástico hechas con fibras de origen natural y biodegradables, conservando su suavidad y pureza.</p></div>,
@@ -139,7 +139,7 @@ export const dataProducts = [
         description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
       },
     ],
-    LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductAleo')} to='/product/aloe-natural'>Ver más</BtnSeeMore>,
+    LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductAleo')} to='/producto/aloe-natural'>Ver más</BtnSeeMore>,
     contentDetail: {
       title: titleDetailProductAleo,
       DescriptionDetail: () => <div className="description"><p>Ofrecen un <strong>cuidado refrescante</strong> para los bebés, porque gracias a su fórmula con <strong>aloe natural, ayudan a humectar y cuidar la piel.</strong></p> <p>Con ingredientes naturales y una tela súper acolchada que ofrecen una limpieza avanzada permitiendo usar menos toallitas por cambio de pañal.</p></div>,
@@ -206,7 +206,7 @@ export const dataProducts = [
         description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
       }
     ],
-    LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductAcolchamax')} to='/product/acolchamax'>Ver más</BtnSeeMore>,
+    LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductAcolchamax')} to='/producto/acolchamax'>Ver más</BtnSeeMore>,
     contentDetail: {
       title: titleDetailProductAcol,
       DescriptionDetail: () => <div className="description"><p>Ofrecen <strong>Cuidado Superior</strong> para los bebés, gracias a su formula con <strong>extracto de almendra ayuda a hidratar y proteger su piel.</strong></p><p> Además ofrecen un cuidado para el planeta con su tela extra acolchada y libre de plástico hechas con fibras de origen natural y biodegradables, que brindan una absorción superior.</p></div>,

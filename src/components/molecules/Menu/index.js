@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from "react-router-dom";
+import React, { useState } from 'react'
+import { NavLink, Link } from "react-router-dom";
 
 import Icon from "../../atoms/Icons";
 import logoPeque from '../../../assets/logo-peque.png';
@@ -12,9 +12,19 @@ import {
   MobileLogo, 
   MobileBottom, 
   ContentDropdown,
+  DropdownProduct
 } from './styledComponents';
 
 const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
+
+  const [ openDrop, setOpenDrop ] = useState(false) 
+
+  const onClickSendData = (nameProduct) => {
+    localStorage.setItem('nameProduct', nameProduct)
+    setOpenDrop(false);
+  }
+
+  console.log('openDrop', openDrop)
 
   return (
     <>
@@ -30,36 +40,67 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
               Inicio
             </NavLink>
 
-            <NavLink
+            {/* <NavLink
               exact
               activeClassName="selected"
               className=""
-              to="/productos"
+              to="/producto/pure-skin"
             >
               Productos
-            </NavLink>
+            </NavLink> */}
 
 
-            {/* <ContentDropdown>
-              <span>Productos</span>
-              <ul>
+            <ContentDropdown>
+              <span onClick={() => setOpenDrop(!openDrop)}>
+                Productos
+                <Icon iconName="arrow-down" height={30} width={30} backgroundColor="#8669B1" />
+              </span>
+              <DropdownProduct
+                animationIn="fadeInDown"
+                animationOut="fadeOutUp"
+                animationInDuration={750} 
+                animationOutDuration={750}
+                isVisible={openDrop}
+                animateOnMount={false}
+              >
                 <li>
-                  <a href="">1</a>
+                  <Link
+                    exact
+                    className=""
+                    to="/producto/pure-skin"
+                    onClick={() => onClickSendData('dataProductSkin')}
+                  >
+                    Pure Skin
+                  </Link>
                 </li>
                 <li>
-                  <a href="">2</a>
+                  <Link
+                    exact
+                    className=""
+                    to="/producto/aloe-natural"
+                    onClick={() => onClickSendData('dataProductAleo')}
+                  >
+                    Aloe Vera
+                  </Link>
                 </li>
                 <li>
-                  <a href="">3</a>
+                  <Link
+                    exact
+                    className=""
+                    to="/producto/acolchamax"
+                    onClick={() => onClickSendData('dataProductAcolchamax')}
+                  >
+                    Acolchamax
+                  </Link>
                 </li>
-              </ul>
-            </ContentDropdown> */}
+              </DropdownProduct>
+            </ContentDropdown>
 
 
             <NavLink
               activeClassName="selected"
               className=""
-              to="/tu-toallita"
+              to="/tu-toallita-ideal"
             >
               Tu toallita ideal
             </NavLink>

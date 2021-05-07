@@ -43,12 +43,18 @@ export const FooterLogo = styled.div`
   display: flex;
   width: 25%;
   position: relative;
-  top: -60px;
+  top: -50px;
   z-index: 5;
   img {
     width: 90%;
-    max-width: 180px;
+    max-width: 130px;
   }
+  ${breakpoint('xxl')`
+    top: -60px;
+    img {
+      max-width: 170px;
+    }
+  `}
 `;
 
 export const FooterNetworks = styled.div`
@@ -65,9 +71,15 @@ export const NetworksList = styled.ul`
   span {
     color: rgba(86, 46, 145, 1);
     font-family: 'bariol bold';
-    font-size: 25px;
-    margin-right: 20px;
+    font-size: 22px;
+    margin-right: 10px;
   }
+  ${breakpoint('xxl')`
+    span {
+      font-size: 25px;
+      margin-right: 20px;
+    }
+  `}
 `;
 
 export const NetworksItem = styled.li`
@@ -108,15 +120,23 @@ export const FooterLinks = styled.div`
     cursor: pointer;
     color: rgba(86, 46, 145, 1);
     font-family: 'bariol bold';
-    font-size: 23px;
+    font-size: 20px;
     transition: all 0.5s ease;
     text-align: right;
     width: max-content;
     &:last-child {
-      margin-top: 10px;
+      margin-top: 8px;
     }
     &:hover {
       transform: scale(1.1);
     }
   }
+  ${breakpoint('xxl')`
+    span {
+      font-size: 23px;
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+  `}
 `;

@@ -25,13 +25,11 @@ const ProductDetailTemplate = () => {
     const nameProduct = localStorage.getItem('nameProduct');
     const data = dataProducts.find(item => item.nameProduct == nameProduct)
     setDataProduct(data)
-  }, [])
-
-  console.log('dataProduct', dataProduct)
+  }, [localStorage.getItem('nameProduct')])
 
   return (
     <ProductDetail>
-      {dataProduct.contentDetail && (
+      {dataProduct && dataProduct.contentDetail && (
         <>
           <ProductDetailTop>
             <ProductDetailLeft>
