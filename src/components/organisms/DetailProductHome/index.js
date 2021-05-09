@@ -1,4 +1,5 @@
 import React from 'react'
+import WithViewportHandler from '../../atoms/WithViewportHandler'
 import Slider from '../../molecules/Slider'
 import { useDispatch } from 'react-redux'
 
@@ -12,7 +13,8 @@ import {
   ContentSeeMore
 } from './styledComponents'
 
-const DetailProductHome = ({ dataProduct }) => {
+const DetailProductHome = (props) => {
+  const { dataProduct, viewport } = props;
   const dispatch = useDispatch();
   const { 
     imgPpal, 
@@ -64,7 +66,7 @@ const DetailProductHome = ({ dataProduct }) => {
       </ProductTop>
 
       <ProductSlide>
-        <Slider slidesToShow={numberItems}>
+        <Slider viewport={viewport} slidesToShow={numberItems}>
           {dataSlider.map(item => {
             return (
               <div key={item.id}>
@@ -90,4 +92,4 @@ const DetailProductHome = ({ dataProduct }) => {
   )
 };
 
-export default DetailProductHome;
+export default WithViewportHandler(DetailProductHome);

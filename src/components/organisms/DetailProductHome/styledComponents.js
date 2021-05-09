@@ -6,9 +6,6 @@ export const ContentProduct = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  /* ${breakpoint('xxl')`
-    width: 30%;
-  `} */
 `;
 
 export const ProductTop = styled.div`
@@ -19,51 +16,70 @@ export const ProductTop = styled.div`
   &:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -22%;
     right: 0;
     background: url(${props => props.sombraBg});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
-    width: 80%;
-    height: 60%;
+    width: 100%;
+    height: 90%;
     z-index: 1;
   }
+  ${breakpoint('md')`
+    &:after {
+      bottom: 0;
+      width: 80%;
+      height: 60%;
+      background-size: contain;
+    }
+  `}
 `;
 
 export const ProductLeft = styled.div`
   display: flex;
-  width: 50%;
+  width: 100%;
   position: relative;
   z-index: 2;
   img {
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
     object-fit: contain;
   }
+  ${breakpoint('md')`
+    width: 50%;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  `}
 `;
 
 export const ProductRight = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  width: 50%;
+  width: 100%;
   position: relative;
   z-index: 3;
   h2 {
     font-size: 0;
     width: 100%;
+    position: relative;
+    width: 82%;
+    margin: 0 auto;
     img {
       object-fit: contain;
-      width: 95%;
+      width: 45%;
     }
   }
   .content--product {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     position: relative;
-    left: -16%;
-    margin-top: 40px;
+    left: -5%;
+    top: -160px;
     img {
       width: 56%;
       object-fit: contain;
@@ -71,17 +87,46 @@ export const ProductRight = styled.div`
   }
 
   .content--desc {
+    width: 90%;
+    margin: 0 auto;
     p {
-      width: 70%;
+      width: 90%;
+      margin: 0 auto;
       color: #707070;
-      font-size: 35px;
-      line-height: 45px;
+      font-size: 24px;
+      line-height: 35px;
       font-family: 'bariol regular';
+      margin-top: -80px;
       strong {
         font-family: 'bariol bold';
       }
     }
   }
+  ${breakpoint('md')`
+    width: 50%;
+    h2 {
+      left: 0;
+      img {
+        width: 95%;
+      }
+    }
+    .content--product {
+      left: -16%;
+      top: 0;
+      margin-top: 40px;
+      justify-content: flex-start;
+    }
+    .content--desc {
+      margin-top: 0;
+      width: initial;
+      p {
+        margin: 0;
+        width: 70%;
+        font-size: 35px;
+        line-height: 45px;
+      }
+    }
+  `}
   ${breakpoint('lg')`
     .content--desc {
       p {
@@ -106,30 +151,38 @@ export const ProductSlide = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 50px auto 300px;
+  margin: 50px auto 60px;
   position: relative;
   &:after {
     content: '';
     position: absolute;
-    bottom: -60%;
+    bottom: -15%;
     left: 0;
     right: 0;
     margin: 0 auto;
     background: url(${fondoAmarillo});
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 180%;
+    height: 100%;
     z-index: 1;
   }
+  ${breakpoint('md')`
+    margin: 50px auto 300px;
+    &:after {
+      bottom: -60%;
+      height: 180%;
+      background-size: contain;
+    }
+  `}
 `;
 
 export const ItemProduct = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  max-width: 270px;
+  max-width: 220px;
   margin: 0 auto;
   width: 90%;
   img {
@@ -192,15 +245,21 @@ export const ItemProduct = styled.div`
       bottom: 10px;
     }
   }
+  ${breakpoint('md')`
+    max-width: 270px;
+  `}
 `;
 
 
 export const ContentSeeMore = styled.div`
   display: flex;
   width: 100%;
-  margin: 80px auto 0;
+  margin: 60px auto 0;
   position: relative;
   z-index: 3;
   justify-content: center;
   align-items: center;
+  ${breakpoint('md')`
+    margin: 80px auto 0;
+  `}
 `;

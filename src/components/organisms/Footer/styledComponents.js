@@ -33,14 +33,19 @@ export const ContentFooter = styled.footer`
 
 export const FooterContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 85%;
   margin: 0 auto;
+  padding: 10px 0;
+  ${breakpoint('md')`
+    padding: 0;
+  `}
 `;
 
 export const FooterLogo = styled.div`
-  display: flex;
+  display: none;
   width: 25%;
   position: relative;
   top: -50px;
@@ -49,6 +54,9 @@ export const FooterLogo = styled.div`
     width: 90%;
     max-width: 130px;
   }
+  ${breakpoint('md')`
+    display: flex;
+  `}
   ${breakpoint('xxl')`
     top: -60px;
     img {
@@ -59,26 +67,38 @@ export const FooterLogo = styled.div`
 
 export const FooterNetworks = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 40%;
-`;
-
-export const NetworksList = styled.ul`
-  display: flex;
-  margin: 0;
-  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
   span {
     color: rgba(86, 46, 145, 1);
     font-family: 'bariol bold';
     font-size: 22px;
     margin-right: 10px;
   }
+  ${breakpoint('sm')`
+    width: 40%;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  `}
   ${breakpoint('xxl')`
     span {
       font-size: 25px;
-      margin-right: 20px;
+      margin-right: 10px;
     }
+  `}
+`;
+
+export const NetworksList = styled.ul`
+  display: flex;
+  margin: 0;
+  align-items: center;
+  padding: 0;
+  ${breakpoint('sm')`
+    padding-inline-start: 40px;
   `}
 `;
 
@@ -99,11 +119,11 @@ export const NetworksLink = styled.a`
 
 export const FooterLinks = styled.div`
   display: flex;
-  width: 35%;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
   flex-wrap: wrap;
-  flex-direction: column;
   align-items: flex-end;
+  padding-bottom: 15px;
   a {
     color: #7E7E7D;
     font-family: 'bariol bold';
@@ -122,15 +142,28 @@ export const FooterLinks = styled.div`
     font-family: 'bariol bold';
     font-size: 20px;
     transition: all 0.5s ease;
-    text-align: right;
-    width: max-content;
+    width: initial;
     &:last-child {
       margin-top: 8px;
+      margin-left: 12px;
     }
     &:hover {
       transform: scale(1.1);
     }
   }
+  ${breakpoint('sm')`
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+    padding-bottom: 0;
+    span {
+      text-align: right;
+      width: max-content;
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  `}
   ${breakpoint('xxl')`
     span {
       font-size: 23px;

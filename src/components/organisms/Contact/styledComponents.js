@@ -19,19 +19,28 @@ export const ContactLeft = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   img {
-    width: 70%;
+    width: 80%;
     object-fit: contain;
   }
+  ${breakpoint('md')`
+    width: 50%;
+    img {
+      width: 70%;
+    }
+  `}
 `;
 
 export const ContactRight = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  width: 50%;
+  width: 100%;
   padding-top: 20px;
+  ${breakpoint('md')`
+    width: 50%;
+  `}
   ${breakpoint('xxl')`
     padding-top: 40px;
   `}
@@ -41,10 +50,15 @@ export const ContactDescription = styled.p`
   display: flex;
   width: 85%;
   color: rgba(97, 97, 97, .7);
-  font-size: 25px;
+  font-size: 24px;
   line-height: 35px;
   font-family: 'bariol regular';
-  margin: 10px 0 0;
+  margin: 10px auto 0;
+  ${breakpoint('md')`
+    font-size: 25px;
+    line-height: 35px;
+    margin: 10px 0 0;
+  `}
   ${breakpoint('xxl')`
     width: 75%;
     margin-top: 20px;
@@ -57,13 +71,14 @@ export const ContactDescription = styled.p`
 export const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
-  width: 65%;
+  width: 85%;
+  margin: 0 auto;
   .row {
     width: 100%;
     margin-top: 40px;
     input {
       padding: 10px 25px; 
-      width: 100%;
+      width: 85%;
       border: 2px solid rgba(224, 224, 224, 1);
       height: 38px;
       background: #F5F5F5;
@@ -87,7 +102,7 @@ export const Form = styled.form`
       font-size: 28px;
       padding: 12px 15px;
       width: 85%;
-      max-width: 120px;
+      max-width: 180px;
       border: none;
       clip-path: polygon(0 15%,2% 0,10% 2%,15% 0,70% 0,73% 2%,90% 2%,98% 4%,100% 50%,98% 95%,94% 100%,50% 100%,30% 100%,25% 98%,4% 98%,1% 90%);
       cursor: pointer;
@@ -98,6 +113,18 @@ export const Form = styled.form`
       }
     }
   }
+  ${breakpoint('md')`
+    width: 65%;
+    margin: 0;
+    .row {
+      input {
+        width: 100%;
+      }
+      button {
+        max-width: 120px;
+      }
+    }
+  `}
   ${breakpoint('xxl')`
     .row {
       margin-top: 50px;

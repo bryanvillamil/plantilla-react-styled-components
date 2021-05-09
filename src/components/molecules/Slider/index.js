@@ -26,13 +26,18 @@ const Carousel = props => {
     autoplay,
     fade,
     slidesToShow,
+    centerMode,
     dots,
+    viewport
   } = props;
+
+  const { isMobileView } = viewport;
 
   const settings = {
     speed: 750,
     infinite: true,
     arrows: true,
+    // centerMode,
     responsive: [
       {
         breakpoint: 1024,
@@ -43,14 +48,14 @@ const Carousel = props => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 568,
         settings: {
-          slidesToShow: 2,
-          rows: 2,
+          slidesToShow: 1,
+          rows: 1,
         }
       }
     ]
@@ -61,10 +66,10 @@ const Carousel = props => {
       <Slider 
         {...settings}
         autoplay={autoplay}
-        arrows={true}
+        arrows={isMobileView ? false : true}
         fade={fade}
         slidesToShow={slidesToShow}
-        dots={dots}
+        dots={isMobileView ? true : false}
         prevArrow={<PrevArrow />}
         nextArrow={<NextArrow />}
       >

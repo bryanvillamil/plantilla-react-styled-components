@@ -6,11 +6,25 @@ export const SliderContainer = styled.div`
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  /* img.imgCenter {
-    margin: 0 auto;
-    width: 90%;
-    max-width: 280px;
-  } */
+  .slick-dots {
+    li {
+      button {  
+        &:before {
+          font-size: 11px;
+          color: #fff;
+          opacity: 1;
+        }
+      }
+      &.slick-active {
+        button {  
+          &:before {
+            opacity: .4;
+            color: black;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const Arrow = styled.div`

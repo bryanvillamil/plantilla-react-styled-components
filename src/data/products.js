@@ -36,7 +36,6 @@ import moreProductAcol1 from '../assets/PRODUCTOS/acolchamax-80@2x.png';
 
 import { BtnSeeMore } from './styledComponents'
 
-
 const onClickSendData = (nameProduct) => {
   localStorage.setItem('nameProduct', nameProduct)
 }

@@ -20,35 +20,48 @@ export const Home = styled.div`
 export const BannerHome = styled.section`
   display: flex;
   width: 100%;
-  /* background: #633E99; */
-  height: 95vh;
+  background: #633E99;
+  height: 70vh;
   position: relative;
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 98%;
-    background: url(${imgBanner});
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+  ${breakpoint('md')`
+    background: none;
+    height: 95vh;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 98%;
+      background: url(${imgBanner});
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  `}
 `;
 
 export const BannerContent = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 32%;
+  width: 90%;
   position: absolute;
   left: 30px;
-  top: 70px;
+  top: 80px;
   z-index: 5;
   img.llegamosAPeru {
-    width: 68%;
+    width: 85%;
     margin: auto;
   }
+  ${breakpoint('md')`
+    width: 32%;
+    top: 70px;
+    left: 30px;
+    img.llegamosAPeru {
+      width: 68%;
+      margin: auto;
+    }
+  `}
   ${breakpoint('xxl')`
     width: 35%;
     top: 120px;
@@ -69,15 +82,21 @@ export const BannerContentDiscover = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
-  height: 180px;
+  height: 120px;
   p {
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'bariol bold';
     color: #6A469E;
     text-align: center;
     width: 80%;
     margin: 0 auto;
   }
+  ${breakpoint('md')`
+    height: 160px;
+    p {
+      font-size: 30px;
+    }
+  `}
   ${breakpoint('xxl')`
     margin-top: 50px;
     height: 180px;
@@ -90,14 +109,14 @@ export const BannerContentDiscover = styled.div`
 export const WrapperProductsHome = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   background: url(${fondoAquaCyan2});
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  top: -180px;
+  top: -50px;
   .containerProducts {
     width: 95%;
     display: flex;
@@ -106,8 +125,8 @@ export const WrapperProductsHome = styled.div`
     align-items: center;
     justify-content: space-around;
   }
-  ${breakpoint('xxl')`
-    
+  ${breakpoint('md')`
+    top: -180px;
   `}
 `;
 
@@ -116,5 +135,8 @@ export const ContentDetail = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: -140px;
+  margin-top: 0px;
+  ${breakpoint('md')`
+     margin-top: -140px;
+  `}
 `;

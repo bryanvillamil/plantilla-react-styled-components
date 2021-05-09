@@ -33,25 +33,45 @@ export const ProductDetailLeft = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 50%;
-  padding: 10px 20px;
+  width: 95%;
+  padding: 10px 0;
   img {
-    width: 80%;
+    width: 100%;
     margin: 0;
     max-width: 400px;
   }
+  .productMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
   .description {
-    width: 75%;
+    width: 98%;
     margin: 0 auto;
     p {
       color: rgba(112, 112, 112, 1);
-      font-size: 25px;
-      line-height: 35px;
+      font-size: 24px;
+      line-height: 36px;
       strong {
         font-family: 'bariol bold';
       }
     }
   }
+  ${breakpoint('md')`
+    width: 50%;
+    padding: 10px 20px;
+    .description {
+      width: 75%;
+      p {
+        font-size: 25px;
+        line-height: 35px;
+      }
+    }
+  `}
   ${breakpoint('xxl')`
     img {
       max-width: 600px;
@@ -81,24 +101,33 @@ export const ProductSlide = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 50px auto 80px;
+  margin: 20px auto 80px;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   &:after {
     content: '';
     position: absolute;
-    bottom: -35%;
+    bottom: -10%;
     left: 0;
     right: 0;
     margin: 0 auto;
     background: url(${fondoAmarillo});
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 180%;
+    height: 100%;
     z-index: 1;
   }
+  ${breakpoint('md')`
+    padding-bottom: 80px;
+    margin: 50px auto 80px;
+    &:after {
+      height: 180%;
+      bottom: -35%;
+      background-size: contain;
+    }
+  `}
   ${breakpoint('xxl')`
     margin: 50px auto 180px;
     padding-bottom: 0;
@@ -180,7 +209,7 @@ export const ContentMoreProducts = styled.section`
   flex-wrap: wrap;
   align-content: flex-start;
   width: 100%;
-  height: 100vh;
+  height: auto;
   .content--more {
     min-height: 320px;
     max-height: 340px;
@@ -218,6 +247,9 @@ export const ContentMoreProducts = styled.section`
       }
     }
   }
+  ${breakpoint('md')`
+    height: 100vh;
+  `}
   ${breakpoint('xxl')`
     height: 70vh;
   `}
@@ -226,12 +258,19 @@ export const ContentMoreProducts = styled.section`
 export const TitleMoreProducts = styled.h2`
   display: flex;
   justify-content: center;
+  text-align: center;
   width: 100%;
   font-family: 'baby';
-  font-size: 55px;
+  font-size: 44px;
+  line-height: 62px;
   color: rgba(86, 46, 145, 1);
   text-transform: uppercase;
-  margin: 0 0 50px;
+  margin: 0 0 20px;
+  ${breakpoint('md')`
+    text-align: left;
+    font-size: 55px;
+    margin: 0 0 50px;
+  `}
   ${breakpoint('xxl')`
     font-size: 65px;
   `}

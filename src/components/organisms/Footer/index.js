@@ -26,8 +26,8 @@ const Footer = () => {
         </FooterLogo>
 
         <FooterNetworks>
+          <span>Síguenos en</span>
           <NetworksList>
-            <span>Síguenos en</span>
             <NetworksItem>
               <NetworksLink href="https://www.instagram.com/pequeninecuador/" target="_blank">
                 <img src={facebook} alt="facebook" />

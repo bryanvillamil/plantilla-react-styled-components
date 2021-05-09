@@ -18,8 +18,9 @@ export const MenuNav = styled.nav`
   left: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 9;
-  border-right: 2px solid #FFEA9E;
-  border-radius: 0 10px 10px 0;
+  /* border-right: 2px solid #777; */
+  box-shadow: 1px 2px 3px #666;
+  clip-path: polygon(0 0%, 22% 0,10% 2%,15% 0, 80% 0, 96% 2%, 96% 2%,97% 15%,100% 50%,97% 93%,95% 100%, 50% 100%, 30% 100%, 25% 98%, 4% 98%, 1% 80%);
   overflow: hidden;
   &.opened {
     transform: translateX(0);
@@ -103,10 +104,10 @@ export const MobileTop = styled.div`
 
 export const MobileLogo = styled.div`
   display: flex;
-  padding: 5px;
+  padding: 8px;
   img {
     object-fit: contain;
-    width: 80px;
+    width: 95px;
   }
 `;
 
@@ -119,29 +120,34 @@ export const Close = styled.div`
 
 export const MobileBottom = styled.div`
   display: flex;
-  margin-top: 30px;
-  padding: 10px 20px;
+  margin-top: 20px;
+  padding: 10px 0px;
   /* flex-grow: 1; */
   flex-wrap: wrap;
   align-content: flex-start;
+  width: 100%;
   h2 {
     font-size: 22px;
     color: #789C4A;
     font-family: 'bariol bold';
   }
-  div {
+  & > div {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    a {
-      margin-top: 30px;
-      font-size: 20px;
+    padding: 5px 20px;
+    flex-wrap: wrap;
+    a, span {
+      margin-top: 35px;
+      font-size: 24px;
       text-decoration: none;
-      font-family: 'bariol bold';
-      line-height: 26px;
-      color: #4D5A31;
+      font-family: 'bariol regular';
+      line-height: 28px;
+      color: #747474;
       position: relative;
       transition: all 0.5s ease;
+      display: flex;
+      align-items: center;
+      width: 100%;
       &:hover {
         &:after {
           transform: scale3d(1, 1, 1);
@@ -149,31 +155,51 @@ export const MobileBottom = styled.div`
         }
       }
       &:after {
+        content: "";
         position: absolute;
         bottom: -5px;
         left: 0px;
-        width: 100%;
-        height: 2px;
+        width: 75%;
+        height: 5px;
+        /* right: 0; */
+        margin: 0 auto;
         transform: scale3d(0, 1, 1);
         transform-origin: left center;
         transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.4s;
-        background: #4D5A31;
+        background: url(${lineActive});
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
       }
-
       &.selected {
-        color: #789C4A;
+        color: #562E91;
+        font-family: 'bariol bold';
         &:after {
           transform: scale3d(1, 1, 1);
-          background: #789C4A;
         }
+      } 
+      svg { 
+        margin-left: 3px;
+        margin-top: 4px;
+        transform: rotate(-90deg);
       }
     }
   }
+
+  /* ${breakpoint('md')`
+    & > div {
+      padding: 0;
+      flex-wrap: nowrap;
+    }
+  `} */
 `;
 
 export const ContentDropdown = styled.div`
   display: flex;
   position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 99;
   span {
     display: flex;
     align-items: center;
@@ -182,11 +208,14 @@ export const ContentDropdown = styled.div`
       margin-top: 4px;
     }
   }
+  ${breakpoint('md')`
+    width: initial;
+  `}
 `;
 
 export const DropdownProduct = styled(Animated)`
-  position: absolute;
-  top: 100%;
+  position: relative;
+  top: 10%;
   left: 0;
   width: 100%;
   z-index: -2;
@@ -228,4 +257,10 @@ export const DropdownProduct = styled(Animated)`
       }
     }
   }
+
+  ${breakpoint('md')`
+    position: absolute;
+    top: 100%;
+    height: auto;
+  `}
 `;

@@ -24,11 +24,15 @@ export const Burger = styled.button`
   div {
     width: 25px;
     height: 3px;
-    background: #789C4A;
+    background: #6A469E;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    &:first-child {
+      transform: rotate(3deg);
+      top: -1px;
+    }
   }
 
   &.opened {

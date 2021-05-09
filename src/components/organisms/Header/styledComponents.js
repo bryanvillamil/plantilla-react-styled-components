@@ -42,10 +42,10 @@ export const HeaderContain = styled.div`
 
 export const HeaderLogo = styled.div`
   display: flex;
-  width: 150px;
+  width: 130px;
   padding: 12px 0;
   position: absolute;
-  top: 12px;
+  top: 0;
   left: 0;
   z-index: 3;
   h1 {
@@ -56,6 +56,10 @@ export const HeaderLogo = styled.div`
     width: 100%;
     object-fit: cover;
   }
+  ${breakpoint('md')`
+    width: 150px;
+    top: 12px;
+  `}
   ${breakpoint('lg')`
     padding: 10px 0;
   `}

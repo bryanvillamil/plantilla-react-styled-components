@@ -7,17 +7,17 @@ import cuidado from '../../../assets/TOALLITAS/CUIDADO-DE-LA-PIEL@2x.png'
 import textura from '../../../assets/TOALLITAS/TEXTURA@2x.png'
 import { ContentCaraterist, WrapperBoxes, Box } from './styledComponents'
 
-const SelectCaracterist = () => {
+const SelectCaracterist = ({ setCurrentView }) => {
   return (
     <ContentCaraterist>
       <FormSelectOption title={titleImg}>
         
         <WrapperBoxes>
-          <Box>
+          <Box onClick={() => setCurrentView(2)}>
             <img src={ingrediente} alt="ingrediente" />
             <span>Ingrediente</span>
           </Box>
-          <Box>
+          <Box onClick={() => setCurrentView(2)}>
             <img src={cuidado} alt="cuidado" />
             <span>Cuidado de la piel</span>
           </Box>

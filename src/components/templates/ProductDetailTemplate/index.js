@@ -16,7 +16,9 @@ import {
   TitleMoreProducts
 } from './styledComponents';
 
-const ProductDetailTemplate = () => {
+const ProductDetailTemplate = (props) => {
+
+  const { viewport } = props;
 
   const [ dataProduct, setDataProduct] = useState({})
 
@@ -35,16 +37,24 @@ const ProductDetailTemplate = () => {
             <ProductDetailLeft>
               <img src={dataProduct.contentDetail.title} alt="images title" />
 
+              {viewport.isMobileView && (
+                <div className="productMobile">
+                  <img src={dataProduct.contentDetail.imageDetail} alt="images product" />
+                </div>
+              )}
+
               <dataProduct.contentDetail.DescriptionDetail />
             </ProductDetailLeft>
 
-            <ProductDetailRight>
-              <img src={dataProduct.contentDetail.imageDetail} alt="images product" />
-            </ProductDetailRight>
+            {!viewport.isMobileView && (
+              <ProductDetailRight>
+                <img src={dataProduct.contentDetail.imageDetail} alt="images product" />
+              </ProductDetailRight>
+            )}
           </ProductDetailTop>
 
           <ProductSlide>
-            <Slider slidesToShow={dataProduct.numberItems}>
+            <Slider viewport={viewport} slidesToShow={dataProduct.numberItems}>
               {dataProduct.dataSlider.map(item => {
                 return (
                   <div key={item.id}>
@@ -65,7 +75,7 @@ const ProductDetailTemplate = () => {
           <ContentMoreProducts>
             <TitleMoreProducts>Presentaciones del producto</TitleMoreProducts>
 
-            <Slider slidesToShow={dataProduct.contentDetail.numberItems}>
+            <Slider viewport={viewport} slidesToShow={dataProduct.contentDetail.numberItems}>
               {dataProduct.contentDetail.moreProducts.map(item => {
                 return (
                   <div className="content--more" key={item.id}>

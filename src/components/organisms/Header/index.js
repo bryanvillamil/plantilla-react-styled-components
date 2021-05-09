@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import Menu from '../../molecules/Menu'
 import Burger from '../../atoms/Burger'
@@ -19,7 +20,9 @@ const Header = (props) => {
       <HeaderContain>
         <HeaderLogo>
           <h1>
-            <img src={logoPeque} alt="logo-peque" />
+            <Link to="/">
+              <img src={logoPeque} alt="logo-peque" />
+            </Link>
           </h1>
         </HeaderLogo>
         <HeaderMenu>

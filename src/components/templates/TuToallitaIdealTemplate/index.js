@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import withViewportHandler from '../../atoms/WithViewportHandler';
 import SelectIngredients from '../../organisms/SelectIngredients';
 import SelectCaracterist from '../../organisms/SelectCaracterist';
@@ -18,8 +18,12 @@ import {
   BoxProduct
 } from './styledComponents';
 
-const TuToallitaIdealTemplate = () => {
-  const [ currentView, setCurrentView ] = useState(0)
+const TuToallitaIdealTemplate = (props) => {
+  const [ currentView, setCurrentView ] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [])
 
   return (
     <>
@@ -53,7 +57,7 @@ const TuToallitaIdealTemplate = () => {
       )}
 
       {currentView === 1 && (
-        <SelectCaracterist />
+        <SelectCaracterist setCurrentView={setCurrentView} />
       )}
 
       {currentView === 2 && (

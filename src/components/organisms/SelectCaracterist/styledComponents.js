@@ -61,7 +61,6 @@ export const Box = styled.div`
     ${breakpoint('xxl')`
       font-size: 40px;
       padding: 18px 30px;
-      width: 30%;
       img {
         max-width: 280px;
         &.imgBig {
