@@ -12,11 +12,11 @@ export const WrapperBoxes = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 95%;
-  margin: 0 auto 110px;
+  width: 80%;
+  margin: 0 auto 50px;
   position: relative;
   ${breakpoint('md')`
-    width: 80%;
+    margin: 0 auto 110px;
   `}
   ${breakpoint('xxl')`
     width: 72%;
@@ -28,13 +28,13 @@ export const Box = styled(Link)`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 95%;
+  width: 100%;
   position: relative;
   text-decoration: none;
-  margin-top: 50px;
+  margin-bottom: 35px;
   img {
     width: 40%;
-    max-width: 120px;
+    max-width: 150px;
     object-fit: contain;
     object-position: center;
   }
@@ -47,10 +47,10 @@ export const Box = styled(Link)`
     color: #fff;
     font-family: 'bariol regular';
     font-size: 20px;
-    width: 62%;
+    width: 58%;
     flex-wrap: wrap;
-    text-align: center;
     align-content: center;
+    margin-left: 5px;
     strong {
       font-family: 'bariol bold';
       margin-left: 5px;
@@ -58,17 +58,18 @@ export const Box = styled(Link)`
   }
   ${breakpoint('md')`
     width: 33%;
-    margin-top: 0px;
+    margin-bottom: 0;
     img {
       width: 90%;
       max-width: 220px;
     }
     p {
       width: 85%;
-      font-size: 23px;
       padding: 15px 12px;
-      text-align: center;
+      font-size: 23px;
       align-content: flex-start;
+      text-align: center;
+      margin-left: 0;
     }
   `}
   ${breakpoint('lg')`

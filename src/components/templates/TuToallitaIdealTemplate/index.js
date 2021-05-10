@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import withViewportHandler from '../../atoms/WithViewportHandler';
 import SelectIngredients from '../../organisms/SelectIngredients';
 import SelectCaracterist from '../../organisms/SelectCaracterist';
+import SelectCloth from '../../organisms/SelectCloth';
 
 import bannerToallitas from '../../../assets/TOALLITAS/frase-toallitas.svg';
 import producto1 from '../../../assets/HOME/acuarela-pureskin@2x.png';
@@ -57,11 +58,15 @@ const TuToallitaIdealTemplate = (props) => {
       )}
 
       {currentView === 1 && (
-        <SelectCaracterist setCurrentView={setCurrentView} />
+        <SelectCaracterist viewport={props.viewport} setCurrentView={setCurrentView} />
       )}
 
       {currentView === 2 && (
-        <SelectIngredients />
+        <SelectIngredients setCurrentView={setCurrentView} />
+      )}
+
+      {currentView === 3 && (
+        <SelectCloth setCurrentView={setCurrentView} />
       )}
 
     </>

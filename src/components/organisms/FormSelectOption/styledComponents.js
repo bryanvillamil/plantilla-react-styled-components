@@ -10,6 +10,7 @@ export const ContentFormSelect = styled.div`
   min-height: 100vh;
   align-content: space-around;
   align-items: flex-start;
+  align-content: center;
   ${breakpoint('xxl')`
     min-height: 80vh;
   `}
@@ -32,7 +33,7 @@ export const FormSelectTitle = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px 20px 0;
+  padding: 30px 20px 40px;
   img {
     max-width: 420px;
     width: 90%;
