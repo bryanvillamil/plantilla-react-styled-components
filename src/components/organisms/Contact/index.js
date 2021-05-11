@@ -49,8 +49,11 @@ const Contact = (props) => {
         email: dataContact.email,
       }
 
-      ApiService.sendDataUser(sendData).then((data) => {
-        console.log('resp', data);
+      ApiService.sendDataUser(sendData).then((response) => {
+        console.log('resp', response);
+        if (response["Respuesta" === 2]) {
+          console.log('envio bien')
+        }
       })
     }
   }
