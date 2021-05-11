@@ -76,6 +76,7 @@ export const Form = styled.form`
   .row {
     width: 100%;
     margin-top: 40px;
+    position: relative;
     input {
       padding: 10px 25px; 
       width: 85%;
@@ -140,4 +141,14 @@ export const Form = styled.form`
       }
     }
   `}
+`;
+
+export const SpanError = styled.span`
+  color: red;
+  position: absolute;
+  bottom: -20px;
+  left: 18px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
 `;

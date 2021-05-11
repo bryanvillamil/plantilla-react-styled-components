@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 
+import ApiService from '../../../services/ApiServices'
+
 import imageContact from '../../../assets/HOME/img-form@2x.png'
-import { ContenContact, ContactLeft, ContactRight, ContactDescription, Form } from './styledComponents'
+import { ContenContact, ContactLeft, ContactRight, ContactDescription, Form, SpanError } from './styledComponents'
 
 const Contact = (props) => {
 
@@ -25,7 +27,32 @@ const Contact = (props) => {
 
   const onSubmitContact = (e) => {
     e.preventDefault();
-    console.log('send', dataContact)
+
+    let isError = false;
+    const errorCustom = {
+      name: '',
+      email: '',
+    };
+
+    for (const field in errorCustom) {
+      if (!dataContact[field]) {
+        isError = true;
+        errorCustom[field] = `¡Error, debe llenar este campo!`;
+      }
+    }
+
+    setError({ ...errorCustom });
+
+    if (!isError) {
+      const sendData = {
+        name: dataContact.name,
+        email: dataContact.email,
+      }
+
+      ApiService.sendDataUser(sendData).then((data) => {
+        console.log('resp', data);
+      })
+    }
   }
 
   return (
@@ -50,6 +77,9 @@ const Contact = (props) => {
                 setError({ ...error, name: '' });
               }}
             />
+            {error.name && (
+              <SpanError>{error.name}</SpanError>
+            )}
           </div>
 
           <div className="row">
@@ -63,6 +93,9 @@ const Contact = (props) => {
                 setError({ ...error, email: '' });
               }}
             />
+            {error.email && (
+              <SpanError>{error.email}</SpanError>
+            )}
           </div>
 
           <div className="row">
