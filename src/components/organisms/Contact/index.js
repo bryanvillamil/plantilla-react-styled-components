@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Swal from 'sweetalert2'
 
 import ApiService from '../../../services/ApiServices'
 
@@ -51,8 +52,22 @@ const Contact = (props) => {
 
       ApiService.sendDataUser(sendData).then((response) => {
         console.log('resp', response);
-        if (response["Respuesta" === 2]) {
-          console.log('envio bien')
+        if (response["Resultado"] === 2) {
+          Swal.fire({
+            title: '¡Envío Exitoso!',
+            icon: 'success',
+            confirmButtonColor: '#6A469E'
+          })
+          setDataContact({
+            name: '',
+            email: '',
+          })
+        } else {
+          Swal.fire({
+            title: '¡Error, Datos ya enviados!',
+            icon: 'error',
+            confirmButtonColor: '#6A469E'
+          })
         }
       })
     }
