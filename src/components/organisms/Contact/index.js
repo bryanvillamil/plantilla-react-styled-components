@@ -33,6 +33,16 @@ const Contact = (props) => {
 
   const onChangeInput = (fieldName, e) => {
     const { value } = e.target;
+    let regex = new RegExp("^[a-zA-Z ]+$");
+
+    if (fieldName === 'name') {
+      if (!regex.test(value)) {
+        setError({ ...error, name: 'Debe ingresar solo letras' })
+      } else {
+        setError({...error, name: '' })
+      }
+    }
+
     setDataContact({
       ...dataContact,
       [fieldName]: value,
@@ -51,8 +61,15 @@ const Contact = (props) => {
     for (const field in errorCustom) {
       if (!dataContact[field]) {
         isError = true;
-        errorCustom[field] = `¡Error, debe llenar este campo!`;
+        errorCustom[field] = `¡Debes llenar este campo!`;
       }
+    }
+
+    let regex = new RegExp("^[a-zA-Z ]+$");
+
+    if (!regex.test(dataContact.name)) {
+      isError = true;
+      errorCustom.name = 'Debe ingresar solo letras';
     }
 
     setError({ ...errorCustom });
@@ -79,7 +96,7 @@ const Contact = (props) => {
           })
         } else {
           Swal.fire({
-            title: '¡Error',
+            title: response["Errores"][0],
             icon: 'error',
             confirmButtonColor: '#6A469E'
           })
@@ -103,12 +120,12 @@ const Contact = (props) => {
                 <div className="row">
                   <input 
                     name="name" 
-                    type="string"
+                    type="text"
                     value={dataContact.name} 
-                    placeholder="Nombre" 
+                    placeholder="Nombre"
                     onChange={e => {
                       onChangeInput('name', e);
-                      setError({ ...error, name: '' });
+                      // setError({ ...error, name: '' });
                     }}
                   />
                   {error.name && (

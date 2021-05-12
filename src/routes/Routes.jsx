@@ -7,8 +7,8 @@ import TuToallitaIdeal from "../components/pages/TuToallitaIdeal";
 const Routes = () => {
   return (
     <Switch>
-      <Redirect from="/" exact to="/home" />
-      <Route path="/home" component={Home} />
+      <Redirect from="/" exact to="/inicio" />
+      <Route path="/inicio" component={Home} />
       <Route path="/producto/:title" exact component={ProductDetail} />
       <Route path="/tu-toallita-ideal/" exact component={TuToallitaIdeal} />
       {/* <Redirect from="/**" exact to="/home" /> */}

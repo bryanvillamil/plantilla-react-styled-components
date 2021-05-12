@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { Link } from "react-router-dom";
+
 import withViewportHandler from '../../atoms/WithViewportHandler';
 import ProductHome from '../../molecules/ProductHome'
 import DetailProductHome from '../../organisms/DetailProductHome'
@@ -28,6 +30,10 @@ const HomeTemplate = (props) => {
     window.scrollTo(0,0);
   }, [])
 
+  const onClickSendData = (nameProduct) => {
+    localStorage.setItem('nameProduct', nameProduct)
+  }
+
   return (
     <Home>
       <BannerHome>
@@ -41,9 +47,15 @@ const HomeTemplate = (props) => {
 
       <WrapperProductsHome>
         <div className="containerProducts">
-          <ProductHome image={producto1} />
-          <ProductHome image={producto2} />
-          <ProductHome image={producto3} />
+          <Link onClick={() => onClickSendData('dataProductSkin')} to="/producto/pure-skin">
+            <ProductHome image={producto1} />
+          </Link>
+          <Link onClick={() => onClickSendData('dataProductAleo')} to="/producto/aloe-natural">
+            <ProductHome image={producto2} />
+          </Link>
+          <Link  onClick={() => onClickSendData('dataProductAcolchamax')} to="/producto/acolchamax">
+            <ProductHome image={producto3} />
+          </Link>
         </div>
       </WrapperProductsHome>
 

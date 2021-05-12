@@ -22,7 +22,7 @@ const DetailProductHome = (props) => {
     title, 
     sombraBg,
     imgProduct, 
-    description,
+    Description,
     numberItems,
     dataSlider,
     LinkSeeMore,
@@ -35,10 +35,6 @@ const DetailProductHome = (props) => {
   //   slidesToShow: dataSlider.length,
   //   slidesToScroll: dataSlider.length
   // };
-
-  const onClickProduct = () => {
-
-  }
 
   return (
     <ContentProduct>
@@ -60,7 +56,7 @@ const DetailProductHome = (props) => {
           </div>
 
           <div className="content--desc">
-            <p>{description}</p>
+            <Description />
           </div>
         </ProductRight>
       </ProductTop>
@@ -72,8 +68,6 @@ const DetailProductHome = (props) => {
               <div key={item.id}>
                 <ItemProduct>
                   <img src={item.image} className="imgCenter" alt="img slide " />
-                  {/* <div className="bg" style={{ background: `url(${item.image})`}}> */}
-                  {/* </div> */}
                   <div className="content--text">
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>
@@ -85,7 +79,7 @@ const DetailProductHome = (props) => {
         </Slider>
 
         <ContentSeeMore>
-          <LinkSeeMore dispatch={dispatch} onClick={onClickProduct} />
+          <LinkSeeMore dispatch={dispatch} />
         </ContentSeeMore>
       </ProductSlide>
     </ContentProduct>

@@ -5,7 +5,11 @@ import fondoAmarillo from '../../../assets/HOME/acuarela-sellos.png'
 export const ContentProduct = styled.div`
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
   width: 100%;
+  min-height: 100vh;
+  height: 100%;
 `;
 
 export const ProductTop = styled.div`

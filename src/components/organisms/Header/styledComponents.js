@@ -76,9 +76,6 @@ export const HeaderMenu = styled.div`
   position: relative;
   min-height: 65px;
   ${breakpoint('lg')`
-    width: 30%;
-  `}
-  ${breakpoint('xxl')`
-    width: 25%;
+    width: max-content;
   `}
 `

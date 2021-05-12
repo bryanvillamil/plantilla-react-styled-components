@@ -35,7 +35,7 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
               exact
               activeClassName="selected"
               className="gtmToallitasClicMenuInicio"
-              to="/home"
+              to="/inicio"
             >
               Inicio
             </NavLink>
@@ -120,7 +120,7 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
                 exact
                 activeClassName="selected"
                 className="gtmToallitasClicMenuInicio"
-                to="/home"
+                to="/inicio"
               >
                 Inicio
               </NavLink>

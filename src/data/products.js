@@ -49,7 +49,7 @@ export const dataProducts = [
     title: 'Pure Skin', 
     imgProduct: productSkin, 
     sombraBg: contentSombra,
-    description: 'Toallitas Húmedas Pequeñín Pure Skin te ofrecen un Cuidado puro para tu bebé, porque gracias a su fórmula 99% agua y sin fragancia, es lo más parecido a limpiar con agua y algodón y no altera el pH de la piel ¡Ideales para usar desde el primer día!',
+    Description: () => <p>Toallitas Húmedas Pequeñín Pure Skin te ofrecen un <strong>Cuidado puro</strong> para tu bebé, porque gracias a su fórmula <strong>99% agua y sin fragancia,</strong> es lo más parecido a limpiar con agua y algodón y no altera el pH de la piel <strong>¡Ideales para usar desde el primer día!</strong></p>,
     numberItems: 4,
     dataSlider: [
       {
@@ -73,12 +73,6 @@ export const dataProducts = [
       {
         id: 4,
         image: selloAlcohol,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
-      },
-      {
-        id: 5,
-        image: selloFree,
         title: 'Cuidado Puro',
         description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
       }
@@ -116,7 +110,7 @@ export const dataProducts = [
     title: 'Aloe Natural', 
     imgProduct: productAloe, 
     sombraBg: contentSombraAloe,
-    description: 'Toallitas húmedas Pequeñín Aloe te ofrecen un cuidado refrescante para tu bebé, porque gracias a su fórmula con aloe natural, ayudan a humectar y cuidar la piel.',
+    Description: () => <p>Toallitas húmedas Pequeñín Aloe te ofrecen un <strong>cuidado refrescante</strong> para tu bebé, porque gracias a su fórmula con aloe natural, <strong>ayudan a humectar y cuidar la piel.</strong></p>,
     numberItems: 3,
     dataSlider: [
       {
@@ -171,7 +165,7 @@ export const dataProducts = [
     title: 'Acolchamax', 
     imgProduct: productAcolchamax, 
     sombraBg: contentSombraAcolchamax,
-    description: 'Toallitas húmedas Pequeñín Acolchamax te ofrecen Cuidado Superior para tu bebé, gracias a su formula con extracto de almendra ayuda a hidratar y proteger su piel.',
+    Description: () => <p>Toallitas húmedas Pequeñín Acolchamax te ofrecen <strong>Cuidado Superior</strong> para tu bebé, gracias a su formula con extracto de almendra ayuda a <strong>hidratar y proteger su piel.</strong></p>,
     numberItems: 4,
     dataSlider: [
       {
@@ -195,12 +189,6 @@ export const dataProducts = [
       {
         id: 4,
         image: selloAlcohol,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
-      },
-      {
-        id: 5,
-        image: selloFree,
         title: 'Cuidado Puro',
         description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
       }

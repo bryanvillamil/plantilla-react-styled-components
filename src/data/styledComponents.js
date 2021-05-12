@@ -9,9 +9,9 @@ export const BtnSeeMore = styled(Link)`
   background: #562E91;
   color: #fff;
   font-family: 'bariol bold';
-  font-size: 32px;
-  padding: 12px 25px;
-  width: 42%;
+  font-size: 30px;
+  padding: 12px 15px;
+  width: 41%;
   clip-path: polygon(0 15%,2% 0,10% 2%,15% 0,70% 0,73% 2%,90% 2%,98% 4%,100% 50%,98% 95%,94% 100%,50% 100%,30% 100%,25% 98%,4% 98%,1% 90%);
   cursor: pointer;
   transition: all 0.5s ease;

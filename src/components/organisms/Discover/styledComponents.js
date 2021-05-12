@@ -10,10 +10,9 @@ export const ContentDiscover = styled.section`
   margin-top: -50px;
   ${breakpoint('md')`
     margin-top: -200px;
-    min-height: 100vh;
   `}
   ${breakpoint('xxl')`
-    min-height: 90vh;
+    min-height: 100vh;
   `}
 `;
 
@@ -24,8 +23,12 @@ export const BgDiscover = styled.img`
   position: absolute;
   left: 0;
   top: 0;
-  background-size: cover;
+  background-size: contain;
   background-position: right;
+  ${breakpoint('md')`
+    background-size: cover;
+    background-position: right;
+  `}
 `;
 
 export const BannerContent = styled.div`
@@ -33,12 +36,13 @@ export const BannerContent = styled.div`
   flex-wrap: wrap;
   z-index: 5;
   align-content: flex-end;
+  align-items: flex-end;
   justify-content: center;
-  margin-top: 30px;
   img.imgDiscover {
     width: 55%;
     margin: 0 auto;
     object-fit: contain;
+    padding-bottom: 30px;
   }
   ${breakpoint('md')`
     width: 32%;
@@ -50,6 +54,7 @@ export const BannerContent = styled.div`
     align-content: center;
     img.imgDiscover {
       width: 68%;
+      padding-bottom: 0;
     }
   `}
   ${breakpoint('lg')`
@@ -75,8 +80,7 @@ export const LinkDiscover = styled(Link)`
   padding: 14px 15px;
   width: 85%;
   max-width: 220px;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   clip-path: polygon(0 15%,2% 0,10% 2%,15% 0,70% 0,73% 2%,90% 2%,98% 4%,100% 50%,98% 95%,94% 100%,50% 100%,30% 100%,25% 98%,4% 98%,1% 90%);
   cursor: pointer;
   transition: all 0.5s ease;

@@ -6,12 +6,15 @@ import fondoAquaCyan2 from '../../../assets/HOME/acqua-cyan-02@2x.png';
 
 export const Home = styled.div`
   display: flex;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 100%;
   width: 100%;
   flex-wrap: wrap;
   position: relative;
   justify-content: flex-end;
   background-color: #fff;
+  align-items: flex-start;
+  align-content: flex-start;
   ${breakpoint('xl')`
 
   `}
@@ -36,7 +39,7 @@ export const BannerHome = styled.section`
       height: 98%;
       background: url(${imgBanner});
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
     }
   `}
 `;
@@ -49,6 +52,8 @@ export const BannerContent = styled.div`
   left: 30px;
   top: 80px;
   z-index: 5;
+  align-content: center;
+  align-items: center;
   img.llegamosAPeru {
     width: 85%;
     margin: auto;
@@ -101,7 +106,8 @@ export const BannerContentDiscover = styled.div`
     margin-top: 50px;
     height: 180px;
     p {
-      font-size: 50px;
+      font-size: 45px;
+      width: 90%;
     }
   `}
 `;
@@ -110,13 +116,16 @@ export const WrapperProductsHome = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  height: 120px;
   margin: 0 auto;
   position: relative;
   background: url(${fondoAquaCyan2});
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  top: -50px;
+  top: -70px;
+  align-content: flex-start;
+  align-items: flex-start;
   .containerProducts {
     width: 95%;
     display: flex;
@@ -124,8 +133,15 @@ export const WrapperProductsHome = styled.div`
     margin: 0 auto;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
+    a {
+      display: flex;
+      width: 30%;
+      height: 100%;
+    }
   }
   ${breakpoint('md')`
+    height: auto;
     top: -180px;
   `}
 `;
@@ -136,7 +152,11 @@ export const ContentDetail = styled.div`
   flex-wrap: wrap;
   width: 100%;
   margin-top: 0px;
+  min-height: 70vh;
+  height: 100%;
+  align-content: flex-start;
+  align-items: flex-start;
   ${breakpoint('md')`
-     margin-top: -140px;
+    margin-top: -140px;
   `}
 `;
