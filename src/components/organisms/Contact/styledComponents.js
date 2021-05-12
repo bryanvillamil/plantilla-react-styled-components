@@ -38,6 +38,7 @@ export const ContactRight = styled.div`
   align-content: flex-start;
   width: 100%;
   padding-top: 20px;
+  position: relative;
   ${breakpoint('md')`
     width: 50%;
   `}
@@ -73,6 +74,8 @@ export const Form = styled.form`
   flex-wrap: wrap;
   width: 85%;
   margin: 0 auto;
+  position: relative;
+  min-height: 260px;
   .row {
     width: 100%;
     margin-top: 40px;

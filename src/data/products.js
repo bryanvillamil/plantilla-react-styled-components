@@ -49,7 +49,7 @@ export const dataProducts = [
     title: 'Pure Skin', 
     imgProduct: productSkin, 
     sombraBg: contentSombra,
-    description: 'Toallitas húmedas Pequeñín Pure Skin te ofrecen un Cuidado puro para tu bebé, porque gracias a su fórmula 99% agua y sin fragancia, es lo más parecido a limpiar con agua y algodón y no altera el pH de la piel, ¡ideales para usar desde el primer día!',
+    description: 'Toallitas Húmedas Pequeñín Pure Skin te ofrecen un Cuidado puro para tu bebé, porque gracias a su fórmula 99% agua y sin fragancia, es lo más parecido a limpiar con agua y algodón y no altera el pH de la piel ¡Ideales para usar desde el primer día!',
     numberItems: 4,
     dataSlider: [
       {

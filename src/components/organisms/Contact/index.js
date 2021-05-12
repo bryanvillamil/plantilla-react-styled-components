@@ -1,12 +1,25 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 
 import ApiService from '../../../services/ApiServices'
+import { toggleLoader } from '../../../redux/actions'
+
+import Loading from '../../atoms/Loading'
 
 import imageContact from '../../../assets/HOME/img-form@2x.png'
 import { ContenContact, ContactLeft, ContactRight, ContactDescription, Form, SpanError } from './styledComponents'
 
 const Contact = (props) => {
+  const dispatch = useDispatch();
+  const { 
+    showLoader
+  } = useSelector(
+    (state) => ({
+      showLoader: state.UI.showLoader
+    }),
+    shallowEqual
+  )
 
   const [ dataContact, setDataContact ] = useState({
     name: '',
@@ -45,6 +58,7 @@ const Contact = (props) => {
     setError({ ...errorCustom });
 
     if (!isError) {
+      dispatch(toggleLoader());
       const sendData = {
         name: dataContact.name,
         email: dataContact.email,
@@ -52,6 +66,7 @@ const Contact = (props) => {
 
       ApiService.sendDataUser(sendData).then((response) => {
         console.log('resp', response);
+        dispatch(toggleLoader());
         if (response["Resultado"] === 2) {
           Swal.fire({
             title: '¡Envío Exitoso!',
@@ -64,7 +79,7 @@ const Contact = (props) => {
           })
         } else {
           Swal.fire({
-            title: '¡Error, Datos ya enviados!',
+            title: '¡Error',
             icon: 'error',
             confirmButtonColor: '#6A469E'
           })
@@ -82,44 +97,47 @@ const Contact = (props) => {
       <ContactRight>
         <ContactDescription>¿Quieres estar informado de todos nuestros productos y promociones?</ContactDescription>
         <ContactDescription>Registra tu correo y te mantendremos al tanto de todas las novedades</ContactDescription>
+          <Form onSubmit={onSubmitContact}>
+            {showLoader ? <Loading /> : (
+              <>
+                <div className="row">
+                  <input 
+                    name="name" 
+                    type="string"
+                    value={dataContact.name} 
+                    placeholder="Nombre" 
+                    onChange={e => {
+                      onChangeInput('name', e);
+                      setError({ ...error, name: '' });
+                    }}
+                  />
+                  {error.name && (
+                    <SpanError>{error.name}</SpanError>
+                  )}
+                </div>
 
-        <Form onSubmit={onSubmitContact}>
-          <div className="row">
-            <input 
-              name="name" 
-              type="string"
-              value={dataContact.name} 
-              placeholder="Nombre" 
-              onChange={e => {
-                onChangeInput('name', e);
-                setError({ ...error, name: '' });
-              }}
-            />
-            {error.name && (
-              <SpanError>{error.name}</SpanError>
+                <div className="row">
+                  <input 
+                    name="email"
+                    type="email"
+                    value={dataContact.email} 
+                    placeholder="Correo electrónico" 
+                    onChange={e => {
+                      onChangeInput('email', e);
+                      setError({ ...error, email: '' });
+                    }}
+                  />
+                  {error.email && (
+                    <SpanError>{error.email}</SpanError>
+                  )}
+                </div>
+
+                <div className="row">
+                  <button className="btnSubmit" type="submit">Enviar</button>
+                </div>
+              </>
             )}
-          </div>
-
-          <div className="row">
-            <input 
-              name="email"
-              type="email"
-              value={dataContact.email} 
-              placeholder="Correo electrónico" 
-              onChange={e => {
-                onChangeInput('email', e);
-                setError({ ...error, email: '' });
-              }}
-            />
-            {error.email && (
-              <SpanError>{error.email}</SpanError>
-            )}
-          </div>
-
-          <div className="row">
-            <button className="btnSubmit" type="submit">Enviar</button>
-          </div>
-        </Form>
+          </Form>
       </ContactRight>
     </ContenContact>
   )
