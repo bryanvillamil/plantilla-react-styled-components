@@ -23,7 +23,8 @@ const Contact = (props) => {
 
   const [ dataContact, setDataContact ] = useState({
     name: '',
-    email: ''
+    email: '',
+    celular: ''
   })
 
   const [ error, setError ] = useState({
@@ -79,6 +80,7 @@ const Contact = (props) => {
       const sendData = {
         name: dataContact.name,
         email: dataContact.email,
+        celular: dataContact.celular,
       }
 
       ApiService.sendDataUser(sendData).then((response) => {
@@ -147,6 +149,18 @@ const Contact = (props) => {
                   {error.email && (
                     <SpanError>{error.email}</SpanError>
                   )}
+                </div>
+
+                <div className="row">
+                  <input 
+                    name="celular" 
+                    type="number"
+                    value={dataContact.celular} 
+                    placeholder="Celular"
+                    onChange={e => {
+                      onChangeInput('celular', e);
+                    }}
+                  />
                 </div>
 
                 <div className="row">

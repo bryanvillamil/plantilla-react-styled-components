@@ -10,8 +10,7 @@ class ApiService {
       IdActividad: constants.activityId,
       Nombre: otherData.name,
       Email: otherData.email,
-      Celular: '',
-      // Descripcion: otherData.Descripcion
+      Celular: otherData.celular,
     };
 
     const resp = await axios.post(

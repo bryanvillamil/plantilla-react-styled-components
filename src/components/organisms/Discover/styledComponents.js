@@ -11,7 +11,7 @@ export const ContentDiscover = styled.section`
   ${breakpoint('md')`
     margin-top: -200px;
   `}
-  ${breakpoint('xxl')`
+  ${breakpoint('xls')`
     min-height: 100vh;
   `}
 `;

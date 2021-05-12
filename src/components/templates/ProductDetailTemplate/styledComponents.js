@@ -210,6 +210,7 @@ export const ContentMoreProducts = styled.section`
   align-content: flex-start;
   width: 100%;
   height: auto;
+  padding-bottom: 120px;
   .content--more {
     min-height: 320px;
     max-height: 340px;
@@ -247,11 +248,9 @@ export const ContentMoreProducts = styled.section`
       }
     }
   }
-  ${breakpoint('md')`
-    height: 100vh;
-  `}
   ${breakpoint('xxl')`
     height: 70vh;
+    padding-bottom: 0;
   `}
 `;
 
