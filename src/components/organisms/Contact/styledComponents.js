@@ -94,6 +94,11 @@ export const Form = styled.form`
       ::placeholder {
         color: rgba(97, 97, 97, 0.5);
       }
+      ::-webkit-outer-spin-button,
+      ::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
 
     button {
