@@ -50,7 +50,7 @@ export const dataProducts = [
     imgProduct: productSkin, 
     sombraBg: contentSombra,
     Description: () => <p>Toallitas Húmedas Pequeñín Pure Skin te ofrecen un <strong>Cuidado puro</strong> para tu bebé, porque gracias a su fórmula <strong>99% agua y sin fragancia,</strong> es lo más parecido a limpiar con agua y algodón y no altera el pH de la piel <strong>¡Ideales para usar desde el primer día!</strong></p>,
-    numberItems: 4,
+    numberItems: 2,
     dataSlider: [
       {
         id: 1,
@@ -60,27 +60,27 @@ export const dataProducts = [
       },
       {
         id: 2,
-        image: selloAlgodon,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
-      },
-      {
-        id: 3,
         image: selloFree,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+        title: 'Tela libre de plástico',
+        description: 'Ahora su tela es hecha con fibras de origen natural y biodegradables.',
       },
-      {
-        id: 4,
-        image: selloAlcohol,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
-      }
+      // {
+      //   id: 3,
+      //   image: selloAlgodon,
+      //   title: 'Cuidado Puro',
+      //   description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+      // },
+      // {
+      //   id: 4,
+      //   image: selloAlcohol,
+      //   title: 'Cuidado Puro',
+      //   description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+      // }
     ],
     LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductSkin')} to='/producto/pure-skin'>Ver más</BtnSeeMore>,
     contentDetail: {
       title: titleDetailProductSkin,
-      DescriptionDetail: () => <div className="description"><p>Ofrecen un Cuidado puro para los bebés, porque gracias a su fórmula <strong>99% agua y sin fragancia ,</strong> es lo más parecido a limpiar con agua y algodón y no altera el pH de la piel. <strong>¡Ideales para usar desde el primer día!</strong></p> <p>Además ofrecen un cuidado para el planeta porque tienen una tela libre de plástico hechas con fibras de origen natural y biodegradables, conservando su suavidad y pureza.</p></div>,
+      DescriptionDetail: () => <div className="description"><p>Ofrecen un Cuidado puro para los bebés, porque gracias a su fórmula <strong>99% agua y sin fragancia,</strong> son lo más parecido a limpiar con agua y algodón y no altera el pH de la piel. <strong>¡Ideales para usar desde el primer día!</strong></p> <p>Además ofrecen un cuidado para el planeta porque tienen una tela libre de plástico hechas con fibras de origen natural y biodegradables, conservando su suavidad y pureza.</p></div>,
       imageDetail: imageDetailSkin,
       numberItems: 3,
       moreProducts: [
@@ -116,20 +116,20 @@ export const dataProducts = [
       {
         id: 1,
         image: selloHumecta,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+        title: 'Humecta la piel',
+        description: 'Te ofrecen un cuidado refrescante, porque gracias a su fórmula con aloe, ayudan a humectar y cuidar la piel de tu bebé.',
       },
       {
         id: 2,
-        image: selloSuper,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+        image: selloExtra,
+        title: 'Súper acolchadas',
+        description: 'Su tela super acolchada ofrece una limpieza avanzada.',
       },
       {
         id: 3,
         image: selloAlcohol,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+        title: '0% Alcohol y parabenos*',
+        description: 'Los parabenos son preservantes y algunos de ellos están prohibidos porque no se ha comprobado su seguridad.',
       },
     ],
     LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductAleo')} to='/producto/aloe-natural'>Ver más</BtnSeeMore>,
@@ -166,32 +166,32 @@ export const dataProducts = [
     imgProduct: productAcolchamax, 
     sombraBg: contentSombraAcolchamax,
     Description: () => <p>Toallitas húmedas Pequeñín Acolchamax te ofrecen <strong>Cuidado Superior</strong> para tu bebé, gracias a su formula con extracto de almendra ayuda a <strong>hidratar y proteger su piel.</strong></p>,
-    numberItems: 4,
+    numberItems: 3,
     dataSlider: [
       {
         id: 1,
-        image: selloHidrata,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+        image: selloFree,
+        title: 'Tela libre de plástico',
+        description: 'Hecha con fibras de origen natural y biodegradables',
       },
       {
         id: 2,
-        image: selloExtra,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+        image: selloHidrata,
+        title: 'Cuidado superior',
+        description: 'Gracias a su fórmula con almendra, ayudan a hidratar y proteger la piel de tu bebé',
       },
       {
         id: 3,
-        image: selloFree,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+        image: selloExtra,
+        title: 'Tela extra acolchada',
+        description: 'Ofrece una absorción y limpieza superior. ',
       },
-      {
-        id: 4,
-        image: selloAlcohol,
-        title: 'Cuidado Puro',
-        description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
-      }
+      // {
+      //   id: 4,
+      //   image: selloAlcohol,
+      //   title: 'Cuidado Puro',
+      //   description: 'Su fórmula hecha con 99% agua, no altera el pH natural y son libres de fragancia.',
+      // }
     ],
     LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductAcolchamax')} to='/producto/acolchamax'>Ver más</BtnSeeMore>,
     contentDetail: {

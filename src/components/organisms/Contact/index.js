@@ -66,7 +66,7 @@ const Contact = (props) => {
       }
     }
 
-    let regex = new RegExp("^[a-zA-Z ]+$");
+    let regex = new RegExp("^[a-zA-Z]+$");
 
     if (!regex.test(dataContact.name)) {
       isError = true;
