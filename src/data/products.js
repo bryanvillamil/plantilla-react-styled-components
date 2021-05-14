@@ -10,8 +10,8 @@ import selloAlcohol from '../assets/HOME/Sellos/alcohol-parabenos.svg';
 import aguaPurificada from '../assets/HOME/Sellos/agua-purificada.svg';
 import titleDetailProductSkin from '../assets/PRODUCTOS/frase-etapa-PURE-SKIN.svg';
 import imageDetailSkin from '../assets/PRODUCTOS/empaque-pure-skin@2x.png';
-import moreProductSkin40 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Pure-Skinx40und.jpg';
-import moreProductSkin80 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Pure-Skinx80und.jpg';
+import moreProductSkin40 from '../assets/PRODUCTOS2/pure-Skinx40.jpg';
+import moreProductSkin80 from '../assets/PRODUCTOS2/pure-Skinx80.jpg';
  
 
 //product Aleo
@@ -23,10 +23,10 @@ import selloHumecta from '../assets/HOME/Sellos/humecta-piel.svg';
 import selloSuper from '../assets/HOME/Sellos/super-acolchada.svg';
 import titleDetailProductAleo from '../assets/PRODUCTOS/frase-etapa-ALOE.svg';
 import imageDetailAleo from '../assets/PRODUCTOS/empaque-aloe@2x.png';
-import moreProductAelo24 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Aloex24und.png';
-import moreProductAelo50 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Aloex50und.png';
-import moreProductAelo70 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Aloex70und.jpg';
-import moreProductAelo100 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Aloex100und.jpg';
+import moreProductAelo24 from '../assets/PRODUCTOS2/aloex24.png';
+import moreProductAelo50 from '../assets/PRODUCTOS2/aloex50.png';
+import moreProductAelo70 from '../assets/PRODUCTOS2/aloex70.jpg';
+import moreProductAelo100 from '../assets/PRODUCTOS2/aloex100.jpg';
 
 //product Acolchamax
 import bgAcolchamax from '../assets/HOME/acuarela-acolchamax.png';
@@ -37,9 +37,9 @@ import selloHidrata from '../assets/HOME/Sellos/almendra.svg';
 import selloExtra from '../assets/HOME/Sellos/extra-acolchada.svg';
 import titleDetailProductAcol from '../assets/PRODUCTOS/frase-etapa-ACOLCHAMAX.svg';
 import imageDetailAcol from '../assets/PRODUCTOS/empaque-acolchamax@2x.png';
-import moreProducAcol24 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Acolchamaxx24und.png';
-import moreProducAcol40 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Acolchamaxx40und.png';
-import moreProducAcol80 from '../assets/PRODUCTOS2/Toallitas-Húmedas-Acolchamaxx80und.png';
+import moreProducAcol24 from '../assets/PRODUCTOS2/acolchamaxx24.png';
+import moreProducAcol40 from '../assets/PRODUCTOS2/acolchamaxx40.png';
+import moreProducAcol80 from '../assets/PRODUCTOS2/acolchamaxx80.png';
 
 import { BtnSeeMore } from './styledComponents'
 
