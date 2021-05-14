@@ -23,7 +23,7 @@ const SelectIngredients = () => {
           </Box>
           <Box onClick={() => onClickSendData('dataProductSkin')} to="/producto/pure-skin">
             <img src={skin} alt="skin" />
-            <p>Fibras de algodón natural Lo mas parecido a limpiar con algodón</p>
+            <p>Fibras de algodón natural lo mas parecido a limpiar con algodón</p>
           </Box>
           <Box onClick={() => onClickSendData('dataProductAleo')} to="/producto/aloe-natural">
             <img src={aloevera} alt="aloevera" />

@@ -220,17 +220,23 @@ export const ContentMoreProducts = styled.section`
     background-position: center;
     background-repeat: no-repeat;
     display: flex !important;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     img {
       width: 65%;
       margin: 0 auto;
       object-fit: contain;
       position: relative;
       top: -40px;
+      max-width: 300px;
+      object-position: top;
     }
     .content--text {
-      width: 60%;
+      width: 80%;
+      max-width: 300px;
       margin: 0 auto;
       display: flex;
       justify-content: center;
@@ -243,7 +249,7 @@ export const ContentMoreProducts = styled.section`
         font-family: 'bariol bold';
         line-height: 38px;
         text-align: center;
-        width: 90%;
+        width: 70%;
         margin: 0;
       }
     }
@@ -263,7 +269,7 @@ export const TitleMoreProducts = styled.h2`
   font-size: 44px;
   line-height: 62px;
   color: rgba(86, 46, 145, 1);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin: 0 0 20px;
   ${breakpoint('md')`
     text-align: left;

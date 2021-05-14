@@ -5,6 +5,7 @@ import Icon from '../../atoms/Icons'
 import logoPeque from '../../../assets/logo-peque.png'
 import facebook from '../../../assets/facebook.svg'
 import instagram from '../../../assets/instagram.svg'
+import youtube from '../../../assets/youtube.svg'
 
 import { 
   ContentFooter, 
@@ -29,22 +30,28 @@ const Footer = () => {
           <span>Síguenos en</span>
           <NetworksList>
             <NetworksItem>
-              <NetworksLink href="https://www.instagram.com/pequeninecuador/" target="_blank">
+              <NetworksLink href="https://www.instagram.com/pequeninperu/" target="_blank">
                 <img src={facebook} alt="facebook" />
               </NetworksLink>
             </NetworksItem>
 
             <NetworksItem>
-              <NetworksLink href="https://www.facebook.com/PequeninEcuador" target="_blank">
+              <NetworksLink href="https://www.facebook.com/PequeninPeru" target="_blank">
                 <img src={instagram} alt="instagram" />
+              </NetworksLink>
+            </NetworksItem>
+
+            <NetworksItem>
+              <NetworksLink href="https://www.youtube.com/user/videosPequenin/videos" target="_blank">
+                <img src={youtube} alt="youtube" />
               </NetworksLink>
             </NetworksItem>
           </NetworksList>
         </FooterNetworks>
 
         <FooterLinks>
-          <span>Términos legales</span>
-          <span>Políticas de seguridad</span>
+          <a href="https://www.pequenin.com/colombia/configuraciones-y-referencias/generales/terminos-y-condiciones/" target="_blank">Términos legales</a>
+          <a href="https://www.pequenin.com/colombia/configuraciones-y-referencias/generales/politicas-de-proteccion/" target="_blank">Políticas de seguridad</a>
         </FooterLinks>
       </FooterContainer>
     </ContentFooter>

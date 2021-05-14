@@ -77,20 +77,20 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
                   <Link
                     exact
                     className=""
-                    to="/producto/aloe-natural"
-                    onClick={() => onClickSendData('dataProductAleo')}
+                    to="/producto/acolchamax"
+                    onClick={() => onClickSendData('dataProductAcolchamax')}
                   >
-                    Aloe Vera
+                    Acolchamax
                   </Link>
                 </li>
                 <li>
                   <Link
                     exact
                     className=""
-                    to="/producto/acolchamax"
-                    onClick={() => onClickSendData('dataProductAcolchamax')}
+                    to="/producto/aloe-natural"
+                    onClick={() => onClickSendData('dataProductAleo')}
                   >
-                    Acolchamax
+                    Aloe Natural
                   </Link>
                 </li>
               </DropdownProduct>
@@ -153,20 +153,20 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
                   <Link
                     exact
                     className=""
-                    to="/producto/aloe-natural"
-                    onClick={() => onClickSendData('dataProductAleo')}
+                    to="/producto/acolchamax"
+                    onClick={() => onClickSendData('dataProductAcolchamax')}
                   >
-                    Aloe Vera
+                    Acolchamax
                   </Link>
                 </li>
                 <li>
                   <Link
                     exact
                     className=""
-                    to="/producto/acolchamax"
-                    onClick={() => onClickSendData('dataProductAcolchamax')}
+                    to="/producto/aloe-natural"
+                    onClick={() => onClickSendData('dataProductAleo')}
                   >
-                    Acolchamax
+                    Aloe Natural
                   </Link>
                 </li>
               </DropdownProduct>

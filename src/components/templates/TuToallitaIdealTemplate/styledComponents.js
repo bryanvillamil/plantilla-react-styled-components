@@ -54,19 +54,21 @@ export const BannerContent = styled.div`
     margin: auto;
   }
   ${breakpoint('md')`
-    width: 32%;
-    top: 60px;
-    left: 120px;
+    width: 36%;
+    top: 50px;
+    max-width: 500px;
+    left: 100px;
     img.llegamosAPeru {
-      width: 68%;
+      width: 85%;
     }
   `}
   ${breakpoint('xxl')`
-    width: 35%;
+    width: 36%;
     top: 90px;
-    left: 150px;
+    left: 170px;
+    max-width: 700px;
     img.llegamosAPeru {
-      width: 80%;
+      width: 88%;
     }
   `}
 `;
@@ -89,12 +91,13 @@ export const BannerContentToallitas = styled.div`
   }
   ${breakpoint('md')`
     p {
-      font-size: 28px;
+      font-size: 26px;
+      line-height: 32px;
     }
   `}
   ${breakpoint('xxl')`
     p {
-      font-size: 35px;
+      font-size: 36px;
       line-height: 40px;
       width: 90%;
     }
@@ -121,16 +124,16 @@ export const LinkToallitas = styled.span`
     transform: scale(1.1);
   }
   ${breakpoint('md')`
-    margin: 25px auto 0;
-    font-size: 30px;
-    max-width: 150px;
-    padding: 16px 13px;
+    margin: 20px auto 0;
+    font-size: 28px;
+    max-width: 130px;
+    padding: 12px 12px;
   `}
   ${breakpoint('xxl')`
-    padding: 20px 15px;
+    padding: 17px 15px;
     font-size: 40px;
     max-width: 200px;
-    margin: 40px auto 0;
+    margin: 45px auto 0;
   `}
 `;
 

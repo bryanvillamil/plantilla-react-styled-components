@@ -50,11 +50,11 @@ const HomeTemplate = (props) => {
           <Link onClick={() => onClickSendData('dataProductSkin')} to="/producto/pure-skin">
             <ProductHome image={producto1} />
           </Link>
-          <Link onClick={() => onClickSendData('dataProductAleo')} to="/producto/aloe-natural">
-            <ProductHome image={producto2} />
-          </Link>
           <Link  onClick={() => onClickSendData('dataProductAcolchamax')} to="/producto/acolchamax">
             <ProductHome image={producto3} />
+          </Link>
+          <Link onClick={() => onClickSendData('dataProductAleo')} to="/producto/aloe-natural">
+            <ProductHome image={producto2} />
           </Link>
         </div>
       </WrapperProductsHome>

@@ -21,12 +21,12 @@ export const BtnSeeMore = styled(Link)`
   }
   ${breakpoint('md')`
     font-size: 40px;
-    padding: 14px 15px;
+    padding: 12px 15px;
     width: 85%;
-    max-width: 250px;
+    max-width: 200px;
   `}
   ${breakpoint('xxl')`
-    padding: 16px 15px;
-    max-width: 280px;
+    padding: 14px 15px;
+    max-width: 230px;
   `}
 `;

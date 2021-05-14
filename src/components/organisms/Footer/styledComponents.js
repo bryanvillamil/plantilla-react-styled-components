@@ -124,25 +124,14 @@ export const FooterLinks = styled.div`
   flex-wrap: wrap;
   align-items: flex-end;
   padding-bottom: 15px;
-  a {
-    color: #7E7E7D;
-    font-family: 'bariol bold';
-    font-size: 15px;
-    transition: all 0.5s ease;
-    &:last-child {
-      margin-left: 40px;
-    }
-    &:hover {
-      color: #4D5A31;
-    }
-  }
-  span {
+  span, a {
     cursor: pointer;
     color: rgba(86, 46, 145, 1);
     font-family: 'bariol bold';
     font-size: 20px;
     transition: all 0.5s ease;
     width: initial;
+    text-decoration: none;
     &:last-child {
       margin-top: 8px;
       margin-left: 12px;
@@ -156,7 +145,7 @@ export const FooterLinks = styled.div`
     justify-content: center;
     width: 35%;
     padding-bottom: 0;
-    span {
+    span, a {
       text-align: right;
       width: max-content;
       &:last-child {
@@ -165,7 +154,7 @@ export const FooterLinks = styled.div`
     }
   `}
   ${breakpoint('xxl')`
-    span {
+    span, a {
       font-size: 23px;
       &:last-child {
         margin-top: 10px;

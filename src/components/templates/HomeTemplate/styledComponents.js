@@ -59,20 +59,20 @@ export const BannerContent = styled.div`
     margin: auto;
   }
   ${breakpoint('md')`
-    width: 32%;
+    width: 35%;
     top: 70px;
-    left: 30px;
+    left: 85px;
     img.llegamosAPeru {
-      width: 68%;
+      width: 74%;
       margin: auto;
     }
   `}
   ${breakpoint('xxl')`
-    width: 35%;
+    width: 37%;
     top: 120px;
-    left: 70px;
+    left: 120px;
     img.llegamosAPeru {
-      width: 80%;
+      width: 82%;
     }
   `}
 `;
