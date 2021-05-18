@@ -8,6 +8,10 @@ import selloAlgodon from '../assets/HOME/Sellos/algodon.svg';
 import selloFree from '../assets/HOME/Sellos/libre-plastico.svg';
 import selloAlcohol from '../assets/HOME/Sellos/alcohol-parabenos.svg';
 import aguaPurificada from '../assets/HOME/Sellos/agua-purificada.svg';
+import hechasConAgua from '../assets/new-sellos/hechas-con-agua.png';
+import cubreLaBoca from '../assets/new-sellos/cubre-la-boca.png';
+import selloLigero from '../assets/new-sellos/ligero.png';
+import selloHipoalergenicas from '../assets/new-sellos/hipoalergenicas.png';
 import titleDetailProductSkin from '../assets/PRODUCTOS/frase-etapa-PURE-SKIN.svg';
 import imageDetailSkin from '../assets/PRODUCTOS/empaque-pure-skin@2x.png';
 import moreProductSkin40 from '../assets/PRODUCTOS2/pure-Skinx40.jpg';
@@ -20,7 +24,6 @@ import titleAloe from '../assets/HOME/alore-vera.svg';
 import productAloe from '../assets/HOME/empaque-aloe@2x.png';
 import contentSombraAloe from '../assets/HOME/manchon-aloe@2x.png';
 import selloHumecta from '../assets/HOME/Sellos/humecta-piel.svg';
-import selloSuper from '../assets/HOME/Sellos/super-acolchada.svg';
 import titleDetailProductAleo from '../assets/PRODUCTOS/frase-etapa-ALOE.svg';
 import imageDetailAleo from '../assets/PRODUCTOS/empaque-aloe@2x.png';
 import moreProductAelo24 from '../assets/PRODUCTOS2/aloex24.png';
@@ -85,13 +88,19 @@ export const dataProducts = [
       },
       {
         id: 5,
-        image: selloAlgodon,
+        image: selloLigero,
         title: '',
         description: 'Ahora con nuestras toallitas húmedas libres de plástico, hemos rediseñado nuestros empaques, logrando que sean más ligeros y con menos plástico, que los hace más amigables con el planeta.',
       },
       {
         id: 6,
-        image: aguaPurificada,
+        image: hechasConAgua,
+        title: '',
+        description: '',
+      },
+      {
+        id: 7,
+        image: cubreLaBoca,
         title: '',
         description: '',
       },
@@ -147,13 +156,25 @@ export const dataProducts = [
       },
       {
         id: 4,
-        image: selloAlgodon,
+        image: selloLigero,
         title: '',
         description: 'Ahora con nuestras toallitas húmedas libres de plástico, hemos rediseñado nuestros empaques, logrando que sean más ligeros y con menos plástico, que los hace más amigables con el planeta.',
       },
       {
         id: 5,
-        image: aguaPurificada,
+        image: selloHipoalergenicas,
+        title: '',
+        description: '',
+      },
+      {
+        id: 6,
+        image: cubreLaBoca,
+        title: '',
+        description: '',
+      },
+      {
+        id: 7,
+        image: hechasConAgua,
         title: '',
         description: '',
       },
@@ -225,9 +246,21 @@ export const dataProducts = [
       },
       {
         id: 5,
-        image: selloAlgodon,
+        image: selloLigero,
         title: '',
         description: 'Ahora con nuestras toallitas húmedas libres de plástico, hemos rediseñado nuestros empaques, logrando que sean más ligeros y con menos plástico, que los hace más amigables con el planeta.',
+      },
+      {
+        id: 6,
+        image: selloHipoalergenicas,
+        title: '',
+        description: '',
+      },
+      {
+        id: 7,
+        image: cubreLaBoca,
+        title: '',
+        description: '',
       },
     ],
     LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductAcolchamax')} to='/producto/acolchamax'>Ver más</BtnSeeMore>,
