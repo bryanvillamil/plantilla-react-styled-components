@@ -234,7 +234,7 @@ export const ItemProduct = styled.div`
       margin: 0 auto;
       font-family: 'bariol regular';
       line-height: 1.2;
-      font-size: 16px;
+      font-size: 15px;
     }
     ${breakpoint('xxl')`
       width: 77%;
@@ -244,7 +244,7 @@ export const ItemProduct = styled.div`
         margin-bottom: 8px;
       }
       p {
-        font-size: 18px;
+        font-size: 17px;
       }
     `}
   }

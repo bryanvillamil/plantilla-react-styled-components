@@ -20,9 +20,26 @@ export const ProductDetail = styled.div`
 export const ProductDetailTop = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   min-height: 60vh;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 0 5%;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -30%;
+    width: 85%;
+    height: 85%;
+    background: url(${props => props.mancha});
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
   ${breakpoint('xxl')`
     padding-bottom: 60px;
   `}
@@ -91,6 +108,8 @@ export const ProductDetailRight = styled.div`
   padding-top: 130px;
   width: 45%;
   height: 100%;
+  position: relative;
+  z-index: 2;
   img {
     width: 80%;
     object-fit: contain;

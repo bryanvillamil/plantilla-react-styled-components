@@ -30,13 +30,13 @@ const Footer = () => {
           <span>Síguenos en</span>
           <NetworksList>
             <NetworksItem>
-              <NetworksLink href="https://www.instagram.com/pequeninperu/" target="_blank">
+              <NetworksLink href="https://www.facebook.com/PequeninPeru" target="_blank">
                 <img src={facebook} alt="facebook" />
               </NetworksLink>
             </NetworksItem>
 
             <NetworksItem>
-              <NetworksLink href="https://www.facebook.com/PequeninPeru" target="_blank">
+              <NetworksLink href="https://www.instagram.com/pequeninperu/" target="_blank">
                 <img src={instagram} alt="instagram" />
               </NetworksLink>
             </NetworksItem>

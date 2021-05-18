@@ -5,9 +5,9 @@ import productSkin from '../assets/HOME/empaque-pureskin@2x.png';
 import contentSombra from '../assets/HOME/manchon-pureskin@2x.png';
 import selloAgua from '../assets/HOME/Sellos/99_agua.svg';
 import selloAlgodon from '../assets/HOME/Sellos/algodon.svg';
+import selloAlgodonAleo from '../assets/HOME/Sellos/super-acolchada.svg';
 import selloFree from '../assets/HOME/Sellos/libre-plastico.svg';
 import selloAlcohol from '../assets/HOME/Sellos/alcohol-parabenos.svg';
-import aguaPurificada from '../assets/HOME/Sellos/agua-purificada.svg';
 import hechasConAgua from '../assets/new-sellos/hechas-con-agua.png';
 import cubreLaBoca from '../assets/new-sellos/cubre-la-boca.png';
 import selloLigero from '../assets/new-sellos/ligero.png';
@@ -16,6 +16,7 @@ import titleDetailProductSkin from '../assets/PRODUCTOS/frase-etapa-PURE-SKIN.sv
 import imageDetailSkin from '../assets/PRODUCTOS/empaque-pure-skin@2x.png';
 import moreProductSkin40 from '../assets/PRODUCTOS2/pure-Skinx40.jpg';
 import moreProductSkin80 from '../assets/PRODUCTOS2/pure-Skinx80.jpg';
+import manchaSkin from '../assets/HOME/manchon-pureskin@2x.png';
  
 
 //product Aleo
@@ -30,6 +31,7 @@ import moreProductAelo24 from '../assets/PRODUCTOS2/aloex24.png';
 import moreProductAelo50 from '../assets/PRODUCTOS2/aloex50.png';
 import moreProductAelo70 from '../assets/PRODUCTOS2/aloex70.jpg';
 import moreProductAelo100 from '../assets/PRODUCTOS2/aloex100.jpg';
+import manchaAleo from '../assets/HOME/manchon-aloe@2x.png';
 
 //product Acolchamax
 import bgAcolchamax from '../assets/HOME/acuarela-acolchamax.png';
@@ -43,6 +45,7 @@ import imageDetailAcol from '../assets/PRODUCTOS/empaque-acolchamax@2x.png';
 import moreProducAcol24 from '../assets/PRODUCTOS2/acolchamaxx24.png';
 import moreProducAcol40 from '../assets/PRODUCTOS2/acolchamaxx40.png';
 import moreProducAcol80 from '../assets/PRODUCTOS2/acolchamaxx80.png';
+import manchaAcolchamax from '../assets/HOME/manchon-acolchamax@2x.png';
 
 import { BtnSeeMore } from './styledComponents'
 
@@ -59,7 +62,7 @@ export const dataProducts = [
     title: 'Pure Skin', 
     imgProduct: productSkin, 
     sombraBg: contentSombra,
-    Description: () => <p>Toallitas Húmedas Pequeñín Pure Skin te ofrecen un <strong>Cuidado puro</strong> para tu bebé, porque gracias a su fórmula <strong>99% agua y sin fragancia,</strong> es lo más parecido a limpiar con agua y algodón y no altera el pH de la piel <strong>¡Ideales para usar desde el primer día!</strong></p>,
+    Description: () => <p>Toallitas Húmedas Pequeñín Pure Skin te ofrecen un <strong>Cuidado puro</strong> para tu bebé, porque gracias a su fórmula <strong>99% agua y sin fragancia,</strong> son lo más parecido a limpiar con agua y algodón y no altera el pH de la piel <strong>¡Ideales para usar desde el primer día!</strong></p>,
     numberItems: 4,
     dataSlider: [
       {
@@ -83,7 +86,7 @@ export const dataProducts = [
       {
         id: 4,
         image: selloAlgodon,
-        title: 'Cuidado Puro',
+        title: '',
         description: 'Tela suave como el algodón, gruesa y resistente.',
       },
       {
@@ -110,6 +113,7 @@ export const dataProducts = [
       title: titleDetailProductSkin,
       DescriptionDetail: () => <div className="description"><p>Ofrecen un Cuidado puro para los bebés, porque gracias a su fórmula <strong>99% agua y sin fragancia,</strong> son lo más parecido a limpiar con agua y algodón y no altera el pH de la piel. <strong>¡Ideales para usar desde el primer día!</strong></p> <p>Además ofrecen un cuidado para el planeta porque tienen una tela libre de plástico hechas con fibras de origen natural y biodegradables, conservando su suavidad y pureza.</p></div>,
       imageDetail: imageDetailSkin,
+      mancha: manchaSkin,
       numberItems: 2,
       moreProducts: [
         {
@@ -144,13 +148,13 @@ export const dataProducts = [
       },
       {
         id: 2,
-        image: selloExtra,
+        image: selloAlgodonAleo,
         title: 'Súper acolchadas',
         description: 'Su tela super acolchada ofrece una limpieza avanzada.',
       },
       {
         id: 3,
-        image: selloAlcohol,
+        image: selloHipoalergenicas,
         title: '0% Alcohol y parabenos*',
         description: 'Los parabenos son preservantes y algunos de ellos están prohibidos porque no se ha comprobado su seguridad.',
       },
@@ -162,18 +166,12 @@ export const dataProducts = [
       },
       {
         id: 5,
-        image: selloHipoalergenicas,
-        title: '',
-        description: '',
-      },
-      {
-        id: 6,
         image: cubreLaBoca,
         title: '',
         description: '',
       },
       {
-        id: 7,
+        id: 6,
         image: hechasConAgua,
         title: '',
         description: '',
@@ -184,6 +182,7 @@ export const dataProducts = [
       title: titleDetailProductAleo,
       DescriptionDetail: () => <div className="description"><p>Ofrecen un <strong>cuidado refrescante</strong> para los bebés, porque gracias a su fórmula con <strong>aloe natural, ayudan a humectar y cuidar la piel.</strong></p> <p>Con ingredientes naturales y una tela súper acolchada que ofrecen una limpieza avanzada permitiendo usar menos toallitas por cambio de pañal.</p></div>,
       imageDetail: imageDetailAleo,
+      mancha: manchaAleo,
       numberItems: 3,
       moreProducts: [
         {
@@ -240,7 +239,7 @@ export const dataProducts = [
       },
       {
         id: 4,
-        image: selloAlcohol,
+        image: selloHipoalergenicas,
         title: '',
         description: '0% Alcohol y parabenos*Los parabenos son preservantes y algunos de ellos están prohibidos porque no se ha comprobado su seguridad.',
       },
@@ -252,12 +251,6 @@ export const dataProducts = [
       },
       {
         id: 6,
-        image: selloHipoalergenicas,
-        title: '',
-        description: '',
-      },
-      {
-        id: 7,
         image: cubreLaBoca,
         title: '',
         description: '',
@@ -268,6 +261,7 @@ export const dataProducts = [
       title: titleDetailProductAcol,
       DescriptionDetail: () => <div className="description"><p>Ofrecen <strong>Cuidado Superior</strong> para los bebés, gracias a su formula con <strong>extracto de almendra ayuda a hidratar y proteger su piel.</strong></p><p> Además ofrecen un cuidado para el planeta con su tela extra acolchada y libre de plástico hechas con fibras de origen natural y biodegradables, que brindan una absorción superior.</p></div>,
       imageDetail: imageDetailAcol,
+      mancha: manchaAcolchamax,
       numberItems: 3,
       moreProducts: [
         {

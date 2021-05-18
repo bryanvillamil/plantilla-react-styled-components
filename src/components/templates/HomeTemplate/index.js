@@ -63,14 +63,14 @@ const HomeTemplate = (props) => {
         <DetailProductHome dataProduct={dataProducts[0]} />
       </ContentDetail>
 
-      <ContentDetail>
-        <DetailProductHome dataProduct={dataProducts[1]} />
-      </ContentDetail>
 
       <ContentDetail>
         <DetailProductHome dataProduct={dataProducts[2]} />
       </ContentDetail>
 
+      <ContentDetail>
+        <DetailProductHome dataProduct={dataProducts[1]} />
+      </ContentDetail>
       <Discover />
 
       <Contact />

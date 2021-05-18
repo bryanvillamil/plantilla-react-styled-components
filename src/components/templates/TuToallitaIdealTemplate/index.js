@@ -45,11 +45,11 @@ const TuToallitaIdealTemplate = (props) => {
               </BoxProduct>
 
               <BoxProduct>
-                <img src={producto2} alt="producto 2" />
+                <img src={producto3} alt="producto 3" />
               </BoxProduct>
 
               <BoxProduct>
-                <img src={producto3} alt="producto 3" />
+                <img src={producto2} alt="producto 2" />
               </BoxProduct>
             </WrapperProducts>
 

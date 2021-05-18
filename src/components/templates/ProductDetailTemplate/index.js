@@ -29,11 +29,13 @@ const ProductDetailTemplate = (props) => {
     setDataProduct(data)
   }, [localStorage.getItem('nameProduct')])
 
+  console.log('dataProduct', dataProduct)
+
   return (
     <ProductDetail>
       {dataProduct && dataProduct.contentDetail && (
         <>
-          <ProductDetailTop>
+          <ProductDetailTop mancha={dataProduct.contentDetail.mancha}>
             <ProductDetailLeft>
               <img src={dataProduct.contentDetail.title} alt="images title" />
 
