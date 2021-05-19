@@ -8,7 +8,7 @@ import { toggleLoader } from '../../../redux/actions'
 import Loading from '../../atoms/Loading'
 
 import imageContact from '../../../assets/HOME/img-form@2x.png'
-import { ContenContact, ContactLeft, ContactRight, ContactDescription, Form, SpanError } from './styledComponents'
+import { ContenContact, ContactLeft, ContactRight, ContactDescription, Form, SpanError, BoxTermsCheck } from './styledComponents'
 
 const Contact = (props) => {
   const dispatch = useDispatch();
@@ -24,12 +24,14 @@ const Contact = (props) => {
   const [ dataContact, setDataContact ] = useState({
     name: '',
     email: '',
-    celular: ''
+    celular: '',
+    term: false,
   })
 
   const [ error, setError ] = useState({
     name: '',
-    email: ''
+    email: '',
+    term: false,
   })
 
   const onChangeInput = (fieldName, e) => {
@@ -50,6 +52,13 @@ const Contact = (props) => {
     });
   };
 
+  const onCheckboxChange = (e, isChecked) => {
+    setDataContact({
+      ...dataContact,
+      [e]: isChecked.target.checked,
+    });
+  };
+
   const onSubmitContact = (e) => {
     e.preventDefault();
 
@@ -57,6 +66,7 @@ const Contact = (props) => {
     const errorCustom = {
       name: '',
       email: '',
+      term: '',
     };
 
     for (const field in errorCustom) {
@@ -70,8 +80,14 @@ const Contact = (props) => {
 
     if (!regex.test(dataContact.name)) {
       isError = true;
-      errorCustom.name = 'Debe ingresar solo letras';
+      errorCustom.name = '¡Debes ingresar solo letras!';
     }
+
+    if (!dataContact.term) {
+      isError = true;
+      errorCustom.term = '¡Haz clic en el cuadro si autorizas el tratamiento de tus datos!';
+    }
+    console.log(dataContact)
 
     setError({ ...errorCustom });
 
@@ -81,6 +97,7 @@ const Contact = (props) => {
         name: dataContact.name,
         email: dataContact.email,
         celular: dataContact.celular,
+        term: dataContact.term,
       }
 
       ApiService.sendDataUser(sendData).then((response) => {
@@ -162,7 +179,62 @@ const Contact = (props) => {
                     }}
                   />
                 </div>
+                
+                <div className="row">
+                  <BoxTermsCheck>
+                    <div className="check">
+                      <input
+                      type="checkbox" 
+                      checked={dataContact.term}
+                      name="term"
+                      onChange={e => {
+                        onCheckboxChange('term', e);
+                        setError({ ...error, term: '' });
+                      }}
+                    />
+                      <label>He leído y autorizo tratamiento de datos</label>
 
+                      {error.term && (
+                        <span className="error--term">{error.term}</span>
+                      )}
+                    </div>
+
+                    <div className="text">
+                      <span>Autorización de datos personales:</span>
+
+                      <p>Mediante el registro de mis datos personales en este medio autorizo a Productos Familia S.A y Productos
+                        Sancela del Perú S.A. para la recolección, almacenamiento y uso de los mismos con la finalidad de
+                        contactarme mediante aplicaciones de mensajería instantánea (Whatsapp o similares),  redes sociales,
+                        correo electrónico o correo físico para ofrecer servicios de valor agregado; participar en programas de
+                        beneficios y fidelización; consultar hábitos de consumo y aficiones para ofertas, promociones, servicios,
+                        entre otros; contactarlo para realizar estudios de mercado y encuestas de satisfacción; gestionar tramites
+                        (solicitudes, quejas y reclamos), envío de productos o premios, participación en actividad y concursos.
+                      </p>
+
+                      <p>
+                        Autorizo a la Compañía para que, con base en las regulaciones de transferencia nacional e internacional
+                        de datos, remita a otras filiales de Grupo Familia o terceros, en caso de ser necesario, la información
+                        personal objeto de este tratamiento para llevar a cabo las finalidades enunciadas en los términos de la
+                        política de protección de datos personales, en donde se establecen los principios para el manejo de mis
+                        datos personales. la cual podré consultar la web página 
+                        <a href="https://www.grupofamilia.com.co/es/DTLCentroDocumentos/PoliticaProteccionDatosPersonales2020.pdf" target="_blank" rel="noreferrer">
+                          https://www.grupofamilia.com.co/es/DTLCentroDocumentos/PoliticaProteccionDatosPersonales2020.pdf  
+                        </a>
+                      </p>
+
+                      <p>
+                        Autorizo el tratamiento de mis datos personales por el tiempo necesario para cumplir con las finalidades propuestas.
+                      </p>
+
+                      <p>Como titular de mi información, tengo derecho a conocer, actualizar, corregir, suprimir y revocar mis
+                        datos personales, en los términos señalados en la política de tratamiento y protección de datos
+                        personales de Productos Familia S.A, a través de los medios dispuestos, tales como: correo electrónico
+                        XXX, además de la página web anteriormente indicada.
+                      </p>
+                    </div>
+                  </BoxTermsCheck>
+                </div>
+                
                 <div className="row">
                   <button className="btnSubmit" type="submit">Enviar</button>
                 </div>

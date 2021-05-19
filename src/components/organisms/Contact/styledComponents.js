@@ -127,7 +127,7 @@ export const Form = styled.form`
     margin: 0;
     .row {
       input {
-        width: 100%;
+        width: calc(100% - 30px);
       }
       button {
         max-width: 120px;
@@ -138,6 +138,7 @@ export const Form = styled.form`
     .row {
       margin-top: 50px;
       input {
+        width: calc(100% - 70px);
         height: 50px;
         font-size: 32px;
         padding: 10px 35px; 
@@ -155,8 +156,65 @@ export const SpanError = styled.span`
   color: red;
   position: absolute;
   bottom: -20px;
-  left: 18px;
-  text-transform: uppercase;
-  font-size: 11px;
+  left: 0px;
+  /* text-transform: uppercase; */
+  font-size: 14px;
   letter-spacing: 0.5px;
+`;
+
+export const BoxTermsCheck = styled.div`
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  .check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    input {
+      width: 16px;
+      height: 16px;
+      clip-path: none;
+    }
+    label {
+      margin-left: 5px;
+      font-family: 'bariol bold';
+      color: #562E91;
+    }
+    .error--term {
+      margin-left: 8px;
+      position: absolute;
+      top: -20px;
+      left: -5px;
+      font-size: 14px;
+      color: red;
+      width: 100%;
+    }
+  }
+  .text {
+    min-height: 130px;
+    max-height: 160px;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    span {
+      color: rgba(82, 81, 81, 1);
+    }
+    p {
+      font-family: 'bariol regular';
+      color: rgba(97,97,97,.7);
+      display: flex;
+      flex-wrap: wrap;
+      word-break: break-word;
+      margin-bottom: 0;
+      line-height: 20px;
+      a {
+        margin-left: 5px;
+        width: 100%;
+        color: #562E91;
+      }
+    }
+  }
 `;
