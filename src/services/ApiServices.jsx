@@ -11,6 +11,7 @@ class ApiService {
       Nombre: otherData.name,
       Email: otherData.email,
       Celular: otherData.celular,
+      Check: otherData.term,
     };
 
     const resp = await axios.post(
