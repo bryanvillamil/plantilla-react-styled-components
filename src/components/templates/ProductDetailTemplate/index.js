@@ -60,7 +60,7 @@ const ProductDetailTemplate = (props) => {
               {dataProduct.dataSlider.map(item => {
                 return (
                   <div key={item.id}>
-                    <ItemProduct>
+                    <ItemProduct className={!item.description ? 'notAnimation' : ''}>
                       <img src={item.image} className="imgCenter" alt="img slide " />
                       <div className="content--text">
                         <h2>{item.title}</h2>

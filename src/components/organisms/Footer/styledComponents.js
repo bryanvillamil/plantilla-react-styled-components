@@ -53,6 +53,7 @@ export const FooterLogo = styled.div`
   img {
     width: 90%;
     max-width: 130px;
+    opacity: 0;
   }
   ${breakpoint('md')`
     display: flex;

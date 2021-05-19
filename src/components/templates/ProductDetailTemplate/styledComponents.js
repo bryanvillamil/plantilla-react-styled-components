@@ -160,6 +160,11 @@ export const ItemProduct = styled.div`
   max-width: 270px;
   margin: 0 auto;
   width: 90%;
+  &.notAnimation {
+    .content--text {
+      display: none;
+    }
+  }
   img {
     width: 100%;
     height: 100%;
