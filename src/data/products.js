@@ -111,7 +111,7 @@ export const dataProducts = [
     LinkSeeMore: ({dispatch}) => <BtnSeeMore onClick={() => onClickSendData('dataProductSkin')} to='/producto/pure-skin'>Ver más</BtnSeeMore>,
     contentDetail: {
       title: titleDetailProductSkin,
-      DescriptionDetail: () => <div className="description"><p>Ofrecen un Cuidado puro para los bebés, porque gracias a su fórmula <strong>99% agua y sin fragancia,</strong> son lo más parecido a limpiar con agua y algodón y no altera el pH de la piel. <strong>¡Ideales para usar desde el primer día!</strong></p> <p>Además ofrecen un cuidado para el planeta porque tienen una tela libre de plástico hechas con fibras de origen natural y biodegradables, conservando su suavidad y pureza.</p></div>,
+      DescriptionDetail: () => <div className="description"><p>Ofrecen un <strong>Cuidado puro</strong> para los bebés, porque gracias a su fórmula <strong>99% agua y sin fragancia,</strong> son lo más parecido a limpiar con agua y algodón y no altera el pH de la piel. <strong>¡Ideales para usar desde el primer día!</strong></p> <p>Además ofrecen un cuidado para el planeta porque tienen una tela libre de plástico hechas con fibras de origen natural y biodegradables, conservando su suavidad y pureza.</p></div>,
       imageDetail: imageDetailSkin,
       mancha: manchaSkin,
       numberItems: 2,

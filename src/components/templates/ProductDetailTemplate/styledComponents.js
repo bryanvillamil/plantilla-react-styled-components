@@ -234,7 +234,7 @@ export const ContentMoreProducts = styled.section`
   align-content: flex-start;
   width: 100%;
   height: auto;
-  padding-bottom: 120px;
+  padding-bottom: 140px;
   .content--more {
     min-height: 320px;
     max-height: 340px;
@@ -249,6 +249,7 @@ export const ContentMoreProducts = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
     img {
       width: 65%;
       margin: 0 auto;
@@ -280,7 +281,7 @@ export const ContentMoreProducts = styled.section`
   }
   ${breakpoint('xxl')`
     height: 70vh;
-    padding-bottom: 0;
+    padding-bottom: 50px;
   `}
 `;
 
