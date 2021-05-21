@@ -5,7 +5,7 @@ import productSkin from '../assets/HOME/empaque-pureskin@2x.png';
 import contentSombra from '../assets/HOME/manchon-pureskin@2x.png';
 import selloAgua from '../assets/HOME/Sellos/99_agua.svg';
 import selloAlgodon from '../assets/HOME/Sellos/algodon.png';
-import selloAlgodonAleo from '../assets/HOME/Sellos/super-acolchada.svg';
+import selloAlgodonAleo from '../assets/HOME/Sellos/super-acolchada.png';
 import selloFree from '../assets/HOME/Sellos/libre-plastico.svg';
 import selloAlcohol from '../assets/HOME/Sellos/alcohol-parabenos.svg';
 import hechasConAgua from '../assets/new-sellos/hechas-con-agua.png';
@@ -24,7 +24,7 @@ import bgAloe from '../assets/HOME/acuarela-aloe@2x.png';
 import titleAloe from '../assets/HOME/alore-vera.svg';
 import productAloe from '../assets/HOME/empaque-aloe@2x.png';
 import contentSombraAloe from '../assets/HOME/manchon-aloe@2x.png';
-import selloHumecta from '../assets/HOME/Sellos/humecta-piel.svg';
+import selloHumecta from '../assets/HOME/Sellos/humecta-piel.png';
 import titleDetailProductAleo from '../assets/PRODUCTOS/frase-etapa-ALOE.svg';
 import imageDetailAleo from '../assets/PRODUCTOS/empaque-aloe@2x.png';
 import moreProductAelo24 from '../assets/PRODUCTOS2/aloex24.png';
@@ -69,7 +69,7 @@ export const dataProducts = [
         id: 1,
         image: selloFree,
         title: 'Tela libre de plástico',
-        description: 'Ahora su tela es hecha con fibras de origen natural y biodegradables.',
+        description: 'Su tela es hecha con fibras de origen natural y biodegradables.',
       },
       {
         id: 2,
@@ -79,21 +79,21 @@ export const dataProducts = [
       },
       {
         id: 3,
-        image: selloAlcohol,
-        title: '',
-        description: '0% Alcohol y parabenos*Los parabenos son preservantes y algunos de ellos están prohibidos porque no se ha comprobado su seguridad.',
-      },
-      {
-        id: 4,
         image: selloAlgodon,
         title: '',
         description: 'Tela suave como el algodón, gruesa y resistente.',
       },
       {
+        id: 4,
+        image: selloAlcohol,
+        title: '',
+        description: '0% Alcohol y parabenos*Los parabenos son preservantes y algunos de ellos están prohibidos porque no se ha comprobado su seguridad.',
+      },
+      {
         id: 5,
         image: selloLigero,
         title: '',
-        description: 'Ahora con nuestras toallitas húmedas libres de plástico, hemos rediseñado nuestros empaques, logrando que sean más ligeros y con menos plástico, que los hace más amigables con el planeta.',
+        description: 'Hemos rediseñado nuestros empaques, logrando que sean más ligeros y con menos plástico, que los hace más amigables con el planeta.',
       },
       {
         id: 6,
@@ -160,18 +160,12 @@ export const dataProducts = [
       },
       {
         id: 4,
-        image: selloLigero,
-        title: '',
-        description: 'Ahora con nuestras toallitas húmedas libres de plástico, hemos rediseñado nuestros empaques, logrando que sean más ligeros y con menos plástico, que los hace más amigables con el planeta.',
-      },
-      {
-        id: 5,
         image: cubreLaBoca,
         title: '',
         description: '',
       },
       {
-        id: 6,
+        id: 5,
         image: hechasConAgua,
         title: '',
         description: '',
@@ -223,7 +217,7 @@ export const dataProducts = [
         id: 1,
         image: selloFree,
         title: 'Tela libre de plástico',
-        description: 'Hecha con fibras de origen natural y biodegradables',
+        description: 'Su tela es hecha con fibras de origen natural y biodegradables.',
       },
       {
         id: 2,
@@ -247,11 +241,17 @@ export const dataProducts = [
         id: 5,
         image: selloLigero,
         title: '',
-        description: 'Ahora con nuestras toallitas húmedas libres de plástico, hemos rediseñado nuestros empaques, logrando que sean más ligeros y con menos plástico, que los hace más amigables con el planeta.',
+        description: 'Hemos rediseñado nuestros empaques, logrando que sean más ligeros y con menos plástico, que los hace más amigables con el planeta.',
       },
       {
         id: 6,
         image: cubreLaBoca,
+        title: '',
+        description: '',
+      },
+      {
+        id: 7,
+        image: hechasConAgua,
         title: '',
         description: '',
       },

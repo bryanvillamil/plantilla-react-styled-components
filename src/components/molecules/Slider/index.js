@@ -65,7 +65,7 @@ const Carousel = props => {
     <SliderContainer>
       <Slider 
         {...settings}
-        autoplay={autoplay}
+        autoplay={false}
         arrows={isMobileView ? false : true}
         fade={fade}
         slidesToShow={slidesToShow}
