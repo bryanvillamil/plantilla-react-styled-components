@@ -212,7 +212,6 @@ export const BoxTermsCheck = styled.div`
       line-height: 20px;
       a {
         margin-left: 5px;
-        width: 100%;
         color: #562E91;
       }
     }

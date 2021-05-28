@@ -228,8 +228,8 @@ const Contact = (props) => {
 
                       <p>Como titular de mi información, tengo derecho a conocer, actualizar, corregir, suprimir y revocar mis
                         datos personales, en los términos señalados en la política de tratamiento y protección de datos
-                        personales de Productos Familia S.A, a través de los medios dispuestos, tales como: correo electrónico
-                        XXX, además de la página web anteriormente indicada.
+                        personales de Productos Familia S.A, a través de los medios dispuestos, tales como: correo electronico, <a href="https://www.pequenin.com/colombia/configuraciones-y-referencias/generales/contacto/" target="_blank" rel="noreferrer">contactenos aqui</a>, 
+                        además de la página web anteriormente indicada.
                       </p>
                     </div>
                   </BoxTermsCheck>
