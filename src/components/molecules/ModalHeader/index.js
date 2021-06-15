@@ -17,7 +17,9 @@ const ModalHeader = ({ setOpenModalHeader, openModalHeader }) => {
         {openModalHeader.type === 1 ? (
           <ModalType1>
             <h2>Cobertura Nacional</h2>
-            <img src={logoMetro} alt="logo metro" />
+            <a href="https://www.metro.pe/busca/?ft=peque%C3%B1%C3%ADn" target="_blank" rel="noreferrer">
+              <img src={logoMetro} alt="logo metro" />
+            </a>
           </ModalType1>
         ) : (
           <>
