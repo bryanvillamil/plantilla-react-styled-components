@@ -3,6 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 
 import Icon from "../../atoms/Icons";
 import logoPeque from '../../../assets/logo-peque.png';
+import boxWhite from '../../../assets/cuadro-blanco.svg';
+import iconLocation from '../../../assets/location.svg';
 
 import { 
   MenuNav, 
@@ -12,10 +14,12 @@ import {
   MobileLogo, 
   MobileBottom, 
   ContentDropdown,
-  DropdownProduct
+  DropdownProduct,
+  LinkComprar, 
+  LinkLocation
 } from './styledComponents';
 
-const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
+const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu, setOpenModalHeader }) => {
 
   const [ openDrop, setOpenDrop ] = useState(false) 
 
@@ -23,8 +27,6 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
     localStorage.setItem('nameProduct', nameProduct)
     setOpenDrop(false);
   }
-
-  console.log('openDrop', openDrop)
 
   return (
     <>
@@ -104,6 +106,15 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
             >
               Tu toallita ideal
             </NavLink>
+
+            <LinkComprar onClick={() => setOpenModalHeader({ open: true, bgBox: boxWhite, type: 1 })}>
+              <Icon iconName="cart" width={28} height={28} backgroundColor="#fff" />
+              Comprar
+            </LinkComprar>
+
+            <LinkLocation onClick={() => setOpenModalHeader({ open: true, bgBox: '#fff', type: 2 })}>
+              <img src={iconLocation} alt="location" />
+            </LinkLocation>
             
           </MenuNavDesktop>
         ) : (
@@ -181,6 +192,15 @@ const Menu = ({ isDesktopView, isDesktopLargeView, open, setOpenMenu }) => {
               Tu toallita ideal
               <Icon iconName="arrow-down" height={30} width={30} backgroundColor="#B7A4D2" />
             </NavLink>
+
+            <LinkComprar onClick={() => setOpenModalHeader({ open: true, bgBox: boxWhite, type: 1 })}>
+              <Icon iconName="cart" width={28} height={28} backgroundColor="#fff" />
+              Comprar
+            </LinkComprar>
+
+            <LinkLocation onClick={() => setOpenModalHeader({ open: true, bgBox: '#fff', type: 2 })}>
+              <img src={iconLocation} alt="location" />
+            </LinkLocation>
 
               </div>
             </MobileBottom>

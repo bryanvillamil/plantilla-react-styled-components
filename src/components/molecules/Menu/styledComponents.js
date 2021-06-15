@@ -264,3 +264,48 @@ export const DropdownProduct = styled(Animated)`
     height: auto;
   `}
 `;
+
+export const LinkComprar = styled.div` 
+  cursor: pointer;
+  font-weight: bold;
+  background: rgba(86,46,145,1);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 17px;
+  font-family: 'bariol bold';
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  svg {
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+  }
+  ${breakpoint('md')`
+    margin-left: 20px;
+    margin-top: 0;
+  `}
+`;
+
+export const LinkLocation = styled.div` 
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  img {
+    object-fit: contain;
+    width: 50px;
+  }
+  ${breakpoint('md')`
+    margin-top: 0;
+    img {
+      width: 80%;
+    }
+  `}
+`;

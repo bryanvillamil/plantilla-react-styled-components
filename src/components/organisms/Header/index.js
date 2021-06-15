@@ -11,7 +11,7 @@ import { ContentHeader, HeaderContain, HeaderLogo, HeaderMenu } from './styledCo
 
 const Header = (props) => {
   const dispatch = useDispatch();
-  const { viewport, setOpenComerciales } = props;
+  const { viewport, setOpenComerciales, setOpenModalHeader, openModalHeader } = props;
   const { isDesktopView, isDesktopLargeView } = viewport;
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -34,6 +34,8 @@ const Header = (props) => {
             open={openMenu} 
             setOpenMenu={setOpenMenu} 
             setOpenComerciales={setOpenComerciales} 
+            setOpenModalHeader={setOpenModalHeader}
+            openModalHeader={openModalHeader}
           />
         </HeaderMenu>
       </HeaderContain>

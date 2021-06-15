@@ -119,6 +119,10 @@ export const ProductRight = styled.div`
       top: 0;
       margin-top: 40px;
       justify-content: flex-start;
+      img {
+        max-width: 400px;
+        margin-bottom: 10px;
+      }
     }
     .content--desc {
       margin-top: 0;
@@ -132,6 +136,7 @@ export const ProductRight = styled.div`
     }
   `}
   ${breakpoint('lg')`
+    
     .content--desc {
       p {
         width: 85%;
@@ -141,6 +146,12 @@ export const ProductRight = styled.div`
     }
   `}
   ${breakpoint('xxl')`
+    .content--product {
+      img {
+        max-width: 480px;
+        margin-bottom: 20px;
+      }
+    }
     .content--desc {
       p {
         width: 70%;
